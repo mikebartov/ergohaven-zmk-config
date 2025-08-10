@@ -20,7 +20,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
         };
 
         bksp_del: bksp_del {
@@ -385,25 +386,27 @@
         sym_EN {
             bindings = <
 &trans          &trans        &trans            &trans    &trans    &trans                          &trans        &trans     &trans     &trans    &trans     &trans
-&trans          &trans        &kp LT            &kp LBRC  &kp RBRC  &kp GRAVE                       &kp CARET     &kp HASH   &kp DLLR   &kp AMPS  &trans     &trans
-&kp AT          &ru LA(SEMI)  &kp LS(LA(SEMI))  &kp LPAR  &kp RPAR  &kp DQT                         &kp QUESTION  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &trans
-&ru LS(LA(N4))  &kp LT        &kp GT            &kp LBKT  &kp RBKT  &kp SEMI   &trans    &trans     &kp COLON     &kp FSLH   &kp UNDER  &kp BSLH  &kp AMPS   &kp RU_RUBLE
-                              &trans            &trans    &trans    &trans     &trans    &kp COMMA  &kp DOT       &kp PRCNT  &trans     &trans
+&trans          &trans        &trans            &kp LBRC  &kp RBRC  &kp GRAVE                       &kp CARET     &kp HASH   &kp DLLR   &kp AMPS  &trans     &trans
+&kp AT          &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LPAR  &kp RPAR  &kp DQT                         &kp QUESTION  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &trans
+&ru LS(LA(N4))  &kp LT        &kp GT            &kp LBKT  &kp RBKT  &kp SEMI   &trans    &trans     &kp COLON     &kp FSLH   &kp UNDER  &kp BSLH  &kp PIPE   &kp RU_RUBLE
+                              &trans            &trans    &trans    &trans     &trans    &kp COMMA  &kp DOT       &kp PRCNT  &ru LA(H)  &trans
             >;
 
             display-name = "sym EN";
+            sensor-bindings = <&inc_dec_kp LC(TAB) LS(LC(TAB))>;
         };
 
         sym_RU {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans            &trans    &trans    &trans                               &trans           &trans        &trans        &trans       &trans        &trans
+&trans          &trans        &trans            &en LBRC  &en RBRC  &kp GRAVE                            &kp CARET        &kp HASH      &kp DLLR      &kp AMPS     &trans        &trans
+&kp AT          &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp LPAR  &kp RPAR  &kp RU_DQT                           &kp RU_QUESTION  &kp RU_EXCL   &kp RU_MINUS  &kp RU_PLUS  &kp RU_EQUAL  &trans
+&kp LS(LA(N4))  &en LT        &en GT            &en LBKT  &en RBKT  &kp RU_SEMI  &trans    &trans        &kp RU_COLON     &kp RU_FSLH   &kp UNDER     &kp RU_BSLH  &kp PIPE      &kp RU_RUBLE
+                              &trans            &trans    &trans    &trans       &trans    &kp RU_COMMA  &kp RU_DOT       &kp RU_PRCNT  &kp LA(H)     &trans
             >;
 
             label = "sym RU";
+            sensor-bindings = <&inc_dec_kp LC(TAB) LS(LC(TAB))>;
         };
 
         uc_EN {
