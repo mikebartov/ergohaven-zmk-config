@@ -1,6 +1,5 @@
 #include "keys_ru.h"
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -332,6 +331,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp RIGHT &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
             label = "zotero_odd_pages";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         no_spreads: no_spreads {
@@ -348,6 +349,8 @@
             #binding-cells = <0>;
             bindings = <&en LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp RIGHT &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
             label = "ODD_SPREADS_RU";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         no_spreads_ru: no_spreads_ru {
@@ -371,7 +374,7 @@
 
             label = "FIT_HEIGHT";
             wait-ms = <0>;
-            tap-ms = <30>;
+            tap-ms = <0>;
         };
     };
 
@@ -582,7 +585,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans             &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &kp LS(LA(LG(G)))  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(A)))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp LG(N0)  &trans             &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &trans             &trans
-                &trans  &trans  &trans  &trans  &trans    &trans      &trans             &trans             &trans             &trans
+                &trans  &trans  &trans  &trans  &mo 13    &trans      &trans             &trans             &trans             &trans
             >;
 
             display-name = "WM";
@@ -606,11 +609,11 @@
 
         media {
             bindings = <
-&bootloader  &trans  &trans        &trans      &trans        &out OUT_USB                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans        &trans      &trans        &trans                          &trans        &trans        &trans        &trans        &trans        &studio_unlock
-&trans       &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                          &trans        &trans        &trans        &trans        &trans        &trans
-&trans       &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans        &trans    &trans  &out OUT_USB  &trans        &trans        &trans        &trans        &trans
-                     &trans        &trans      &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                    &trans        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans    &trans  &out OUT_USB  &trans  &trans  &trans  &trans  &trans
+                &trans        &trans      &trans        &trans  &trans    &trans  &trans        &trans  &trans  &trans
             >;
 
             display-name = "Media";
@@ -620,11 +623,11 @@
         emerg {
             display-name = "Emerg";
             bindings = <
-&kp F1       &kp F2    &kp F3     &kp F4    &kp F5     &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&bootloader  &trans    &trans     &trans    &trans     &trans                    &trans  &kp N7  &kp N8  &kp N9   &trans   &studio_unlock
-&trans       &kp LGUI  &kp LCTRL  &kp LALT  &kp LSHFT  &trans                    &trans  &kp N4  &kp N5  &kp N6   &kp N0   &trans
-&trans       &trans    &trans     &trans    &trans     &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3   &trans   &kp ENTER
-                       &trans     &trans    &trans     &trans  &trans    &trans  &trans  &trans  &kp U   &kp B
+&kp F1  &kp F2    &kp F3     &kp F4    &kp F5     &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans    &trans     &trans    &trans     &trans                    &trans  &kp N7  &kp N8  &kp N9   &trans   &studio_unlock
+&trans  &kp LGUI  &kp LCTRL  &kp LALT  &kp LSHFT  &trans                    &trans  &kp N4  &kp N5  &kp N6   &kp N0   &trans
+&trans  &trans    &trans     &trans    &trans     &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3   &trans   &kp ENTER
+                  &trans     &trans    &trans     &trans  &trans    &trans  &trans  &trans  &kp U   &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp F24 F23>;
