@@ -360,8 +360,9 @@
         vpn: vpn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp ENTER>;
+            bindings = <&kp LS(LC(V)) &kp DOWN &kp DOWN &kp ENTER>;
             label = "VPN";
+            tap-ms = <20>;
         };
 
         fit_height: fit_height {
@@ -370,7 +371,7 @@
             bindings = <&mkp MB2 &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
             label = "FIT_HEIGHT";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <20>;
         };
     };
 
@@ -607,7 +608,7 @@
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                                      &kp LA(LG(G))    &kp EQUAL  &ru LA(EQUAL)  &ru LS(LA(EQUAL))  &trans           &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &kp PLUS         &kp N7     &kp N8         &kp N9             &kp KP_SUBTRACT  &plusminus
 &trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                       &kp KP_MULTIPLY  &kp N4     &kp N5         &kp N6             &kp N0           &mult
-&trans  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &trans    &trans     &kp KP_DIVIDE    &kp N1     &kp N2         &kp N3             &mathminus       &kp ENTER
+&trans  &kp LS(LA(LC(LG(N))))  &trans                 &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &trans    &trans     &kp KP_DIVIDE    &kp N1     &kp N2         &kp N3             &mathminus       &kp ENTER
                                &trans                 &trans                 &trans                 &trans                 &trans    &kp COMMA  &kp DOT          &kp PRCNT  &kp LA(MINUS)  &mathminus
             >;
 
