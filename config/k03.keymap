@@ -340,6 +340,38 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        odd_spreads_ru: odd_spreads_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp RIGHT &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
+            label = "ODD_SPREADS_RU";
+        };
+
+        no_spreads_ru: no_spreads_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp RIGHT &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
+            label = "NO_SPREADS_RU";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        vpn: vpn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(X)))) &kp DOWN &kp DOWN &kp ENTER>;
+            label = "VPN";
+        };
+
+        fit_height: fit_height {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2 &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp ENTER>;
+            label = "FIT_HEIGHT";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     combos {
@@ -398,6 +430,23 @@
             bindings = <&kp LC(LG(MINUS))>;
             key-positions = <31 45>;
         };
+
+        nbsp_emdash_ru {
+            bindings = <&nbsp_emdash_ru>;
+            key-positions = <20 32>;
+        };
+
+        nbsp_dash_en {
+            bindings = <&nbsp_emdash_en>;
+            key-positions = <20 32>;
+            layers = <0 2>;
+        };
+
+        par_input {
+            bindings = <&par_input>;
+            key-positions = <27 28>;
+            layers = <0 1 11>;
+        };
     };
 
     keymap {
@@ -408,7 +457,7 @@
 &kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)            &kp LG(N3)     &kp LG(N2)     &kp LG(N1)                            &kp LA(N1)  &kp LA(N2)     &kp LA(N3)     &kp LA(N4)     &kp LA(N5)      &kp LA(N6)
 &kp F12        &kp Q        &kp W                 &kp E          &kp R          &kp T                                 &kp Y       &kp U          &kp I          &kp O          &kp P           &trans
 &caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &kp G                                 &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &trans
-&toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &none          &none    &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
+&toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &none          &vpn     &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
                             &kp LS(LA(LG(LBKT)))  &kp LA(LG(C))  &mo 12         &lt 11 ENTER  &lt 2 SPACE    &remove  &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
             >;
 
@@ -426,9 +475,9 @@
             display-name = "RU";
             bindings = <
 &kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                 &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
-&kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &none
+&kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &trans
 &caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                         &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &none    &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
+&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &vpn     &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
                                          &kp LS(LA(LG(LBKT)))         &kp LA(LG(C))             &mo 12                    &lt 11 ENTER                       &lt 3 SPACE    &remove  &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
             >;
 
@@ -519,7 +568,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans       &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans       &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LC(A))  &no_spreads  &odd_spreads  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_height    &trans       &trans        &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans
             >;
 
@@ -528,11 +577,11 @@
 
         macro_2_RU {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LC(A))  &no_spreads_ru  &odd_spreads_ru  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_height    &trans          &trans           &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans          &trans
             >;
 
             label = "Hot-2 RU";
