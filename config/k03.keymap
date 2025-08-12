@@ -415,13 +415,13 @@
         nbsp_ru {
             bindings = <&kp LA(SPACE)>;
             key-positions = <28 40>;
-            layers = <1 3>;
+            layers = <1 3 12>;
         };
 
         nbsp_en {
             bindings = <&ru LA(SPACE)>;
             key-positions = <28 40>;
-            layers = <0 2>;
+            layers = <0 2 11>;
         };
 
         rclick {
