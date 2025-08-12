@@ -415,13 +415,13 @@
         nbsp_ru {
             bindings = <&kp LA(SPACE)>;
             key-positions = <28 40>;
-            layers = <1 3 12>;
+            layers = <1 3>;
         };
 
         nbsp_en {
             bindings = <&ru LA(SPACE)>;
             key-positions = <28 40>;
-            layers = <0 2 11>;
+            layers = <0 2>;
         };
 
         rclick {
@@ -618,11 +618,11 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(LC(LG(S)))) LS(LA(LC(LG(S))))>;
-            label = "App Num EN";
+            label = "Num EN";
         };
 
         num_ru {
-            label = "App Num RU";
+            label = "Num RU";
             display-name = "App Num";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                                  &kp LA(EQUAL)    &kp LS(LA(EQUAL))  &trans         &trans         &trans         &trans
@@ -663,7 +663,7 @@
         };
 
         nav {
-            display-name = "navig";
+            display-name = "Navig";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans     &trans    &trans     &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp HOME   &kp UP    &kp END    &trans         &trans
