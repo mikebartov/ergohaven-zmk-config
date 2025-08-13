@@ -608,7 +608,7 @@
         };
 
         num_EN {
-            display-name = "App Num";
+            display-name = "Num En";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                               &ru LA(EQUAL)    &ru LS(LA(EQUAL))  &trans         &trans      &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &kp PLUS         &kp N7             &kp N8         &kp N9      &plusminus     &trans
@@ -623,7 +623,7 @@
 
         num_RU {
             label = "Num RU";
-            display-name = "App Num";
+            display-name = "Num Ru";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                                  &kp LA(EQUAL)    &kp LS(LA(EQUAL))  &trans         &trans         &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                          &kp PLUS         &kp N7             &kp N8         &kp N9         &ru_plusminus  &trans
