@@ -305,6 +305,34 @@
             label = "SUP_9";
         };
 
+        sup_minus: sup_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp A>;
+            label = "SUP_MINUS";
+        };
+        
+        sup_plus: sup_plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp B>;
+            label = "SUP_PLUS";
+        };
+
+        sup_lpar: sup_lpar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp D>;
+            label = "SUP_LPAR";
+        };
+
+        sup_rpar: sup_rpar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp E>;
+            label = "SUP_RPAR";
+        };
+
         sub_50: sub_50 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -608,7 +636,7 @@
         };
 
         num_EN {
-            display-name = "Num En";
+            display-name = "Num EN";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                               &ru LA(EQUAL)    &ru LS(LA(EQUAL))  &trans         &trans      &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &kp PLUS         &kp N7             &kp N8         &kp N9      &plusminus     &trans
@@ -623,7 +651,7 @@
 
         num_RU {
             label = "Num RU";
-            display-name = "Num Ru";
+            display-name = "Num RU";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                                  &kp LA(EQUAL)    &kp LS(LA(EQUAL))  &trans         &trans         &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                          &kp PLUS         &kp N7             &kp N8         &kp N9         &ru_plusminus  &trans
