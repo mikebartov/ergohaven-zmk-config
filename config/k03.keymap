@@ -53,6 +53,15 @@
             quick-tap-ms = <50>;
             bindings = <&nbsp_emdash_ru>, <&kp>;
         };
+
+        delete: delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DELETE";
+            bindings = <&kp BSPC>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -311,7 +320,7 @@
             bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp A>;
             label = "SUP_MINUS";
         };
-        
+
         sup_plus: sup_plus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -502,9 +511,9 @@
             bindings = <
 &kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)            &kp LG(N3)     &kp LG(N2)     &kp LG(N1)                                  &kp LA(N1)  &kp LA(N2)     &kp LA(N3)     &kp LA(N4)     &kp LA(N5)      &kp LA(N6)
 &kp F12        &kp Q        &kp W                 &kp E          &kp R          &kp T                                       &kp Y       &kp U          &kp I          &kp O          &kp P           &trans
-&caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &kp G                                       &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &trans
+&caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &lt 10 G                                    &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &trans
 &toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &none          &kp LS(LC(V))  &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
-                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &mo 13         &lt 11 ENTER  &lt 2 SPACE    &remove        &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
+                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &mo 13         &lt 11 ENTER  &lt 2 SPACE    &kp BSPC       &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
             >;
 
             display-name = "EN";
@@ -516,9 +525,9 @@
             bindings = <
 &kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                       &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
 &kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
-&caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                               &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
-                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &mo 13                    &lt 12 ENTER                       &lt 3 SPACE    &remove        &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
+                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &mo 13                    &lt 12 ENTER                       &lt 3 SPACE    &kp BSPC       &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -526,11 +535,11 @@
 
         sym_EN {
             bindings = <
-&trans          &trans    &trans    &trans        &trans            &trans                          &trans        &trans     &trans             &trans     &trans     &trans
-&trans          &trans    &trans    &kp LBRC      &kp RBRC          &kp GRAVE                       &kp CARET     &kp HASH   &kp DLLR           &kp AMPS   &trans     &trans
-&kp AT          &kp LBKT  &kp RBKT  &kp LPAR      &kp RPAR          &kp DQT                         &kp QUESTION  &kp EXCL   &kp MINUS          &kp PLUS   &kp EQUAL  &trans
-&ru LS(LA(N4))  &kp LT    &kp GT    &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp SEMI   &trans    &trans     &kp COLON     &kp FSLH   &kp UNDER          &kp BSLH   &kp PIPE   &ru RU_RUBLE
-                          &trans    &trans        &trans            &trans     &trans    &kp COMMA  &kp DOT       &kp PRCNT  &ru LS(LA(MINUS))  &ru LA(H)
+&trans          &trans    &trans    &trans        &trans            &trans                             &trans        &trans     &trans             &trans     &trans     &trans
+&trans          &trans    &trans    &kp LBRC      &kp RBRC          &kp GRAVE                          &kp CARET     &kp HASH   &kp DLLR           &kp AMPS   &trans     &trans
+&kp AT          &kp LBKT  &kp RBKT  &kp LPAR      &kp RPAR          &kp DQT                            &kp QUESTION  &kp EXCL   &kp MINUS          &kp PLUS   &kp EQUAL  &trans
+&ru LS(LA(N4))  &kp LT    &kp GT    &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp SEMI   &trans    &trans        &kp COLON     &kp FSLH   &kp UNDER          &kp BSLH   &kp PIPE   &ru RU_RUBLE
+                          &trans    &trans        &trans            &trans     &trans    &lt 10 COMMA  &kp DOT       &kp PRCNT  &ru LS(LA(MINUS))  &ru LA(H)
             >;
 
             display-name = "Sym EN";
@@ -539,11 +548,11 @@
 
         sym_RU {
             bindings = <
-&trans          &trans    &trans    &trans        &trans            &trans                               &trans           &trans        &trans             &trans       &trans        &trans
-&trans          &trans    &trans    &en LBRC      &en RBRC          &en GRAVE                            &en CARET        &en HASH      &en DLLR           &en AMPS     &trans        &trans
-&en AT          &en LBKT  &en RBKT  &kp LPAR      &kp RPAR          &kp RU_DQT                           &kp RU_QUESTION  &kp RU_EXCL   &kp RU_MINUS       &kp RU_PLUS  &kp RU_EQUAL  &trans
-&kp LS(LA(N4))  &en LT    &en GT    &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp RU_SEMI  &trans    &trans        &kp RU_COLON     &kp RU_FSLH   &kp UNDER          &kp RU_BSLH  &en PIPE      &kp RU_RUBLE
-                          &trans    &trans        &trans            &trans       &trans    &kp RU_COMMA  &kp RU_DOT       &kp RU_PRCNT  &kp LS(LA(MINUS))  &kp LA(H)
+&trans          &trans    &trans    &trans        &trans            &trans                                  &trans           &trans        &trans             &trans       &trans        &trans
+&trans          &trans    &trans    &en LBRC      &en RBRC          &en GRAVE                               &en CARET        &en HASH      &en DLLR           &en AMPS     &trans        &trans
+&en AT          &en LBKT  &en RBKT  &kp LPAR      &kp RPAR          &kp RU_DQT                              &kp RU_QUESTION  &kp RU_EXCL   &kp RU_MINUS       &kp RU_PLUS  &kp RU_EQUAL  &trans
+&kp LS(LA(N4))  &en LT    &en GT    &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp RU_SEMI  &trans    &trans           &kp RU_COLON     &kp RU_FSLH   &kp UNDER          &kp RU_BSLH  &en PIPE      &kp RU_RUBLE
+                          &trans    &trans        &trans            &trans       &trans    &lt 10 RU_COMMA  &kp RU_DOT       &kp RU_PRCNT  &kp LS(LA(MINUS))  &kp LA(H)
             >;
 
             label = "Sym RU";
@@ -552,11 +561,11 @@
 
         uc_EN {
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &sup_7  &sup_8  &sup_9  &trans   &trans
-&trans  &delta   &gamma  &beta   &alpha  &trans                    &trans  &sup_4  &sup_5  &sup_6  &sup_0   &trans
-&trans  &lambda  &chi    &mu     &sigma  &trans  &trans    &trans  &trans  &sup_1  &sup_2  &sup_3  &sub_50  &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans      &trans  &trans  &trans  &trans   &trans
+&trans  &trans   &trans  &trans  &trans  &trans                    &sup_plus   &sup_7  &sup_8  &sup_9  &trans   &trans
+&trans  &delta   &gamma  &beta   &alpha  &trans                    &sup_minus  &sup_4  &sup_5  &sup_6  &sup_0   &sup_rpar
+&trans  &lambda  &chi    &mu     &sigma  &trans  &trans    &trans  &trans      &sup_1  &sup_2  &sup_3  &sub_50  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans
             >;
 
             label = "Uc EN";
@@ -603,7 +612,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans       &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LC(A))  &no_spreads  &odd_spreads  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_height    &fit_width   &trans        &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans
+                &trans  &trans  &trans  &trans  &mo 14    &trans  &trans  &trans         &trans       &trans
             >;
 
             label = "Hot-2 EN";
@@ -615,7 +624,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &en LA(LC(A))  &no_spreads_ru  &odd_spreads_ru  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_height    &fit_width      &trans           &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans          &trans
+                &trans  &trans  &trans  &trans  &mo 14    &trans  &trans  &trans         &trans          &trans
             >;
 
             label = "Hot-2 RU";
@@ -627,7 +636,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans             &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &kp LS(LA(LG(G)))  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(A)))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp LG(N0)  &trans             &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &trans             &trans
-                &trans  &trans  &trans  &trans  &mo 14    &trans      &trans             &trans             &trans             &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &trans             &trans             &trans             &trans
             >;
 
             display-name = "WM";
