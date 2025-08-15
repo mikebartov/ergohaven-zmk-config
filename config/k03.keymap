@@ -437,7 +437,7 @@
 
         R_CMD {
             bindings = <&kp RCMD>;
-            key-positions = <45 44>;
+            key-positions = <44 30>;
             layers = <0 1>;
         };
 
@@ -516,7 +516,7 @@
 &kp F12        &kp Q        &kp W                 &kp E          &kp R          &kp T                                       &kp Y       &kp U          &kp I          &kp O          &kp P           &trans
 &caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &kp G                                       &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &bspc_del
 &toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &none          &kp LS(LC(V))  &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
-                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &mo 13         &lt 11 ENTER  &lt 2 SPACE    &remove        &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
+                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &lt 13 TAB     &lt 11 ENTER  &lt 2 SPACE    &bspc_del      &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
             >;
 
             display-name = "EN";
@@ -530,7 +530,7 @@
 &kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
 &caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                               &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
-                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &mo 13                    &lt 12 ENTER                       &lt 3 SPACE    &remove        &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
+                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &lt 13 TAB                &lt 12 ENTER                       &lt 3 SPACE    &bspc_del      &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -601,7 +601,7 @@
             bindings = <
 &trans  &trans  &trans         &trans         &trans         &trans                           &trans             &trans             &trans             &trans              &trans             &trans
 &trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                    &kp LA(LC(LG(M)))  &kp LS(F3)         &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &kp LA(LC(LG(G)))
+&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                    &kp LA(LC(LG(M)))  &kp LS(F3)         &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
 &trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans    &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
                 &trans         &trans         &trans         &trans         &trans    &trans  &trans             &kp LC(LG(C))      &trans             &trans
             >;
