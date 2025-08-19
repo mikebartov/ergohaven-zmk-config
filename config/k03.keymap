@@ -1,7 +1,7 @@
 #include "keys_ru.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
@@ -10,8 +10,8 @@
 };
 
 &msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <100>;
 };
 
 / {
