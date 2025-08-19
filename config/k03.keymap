@@ -1,17 +1,14 @@
 #include "keys_ru.h"
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "tap-preferred";
     quick-tap-ms = <50>;
-};
-
-&msc {
-    acceleration-exponent = <0>;
-    time-to-max-speed-ms = <300>;
 };
 
 / {
@@ -70,6 +67,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        msc_scroll: msc_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MSC_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <0>;
         };
     };
 
@@ -719,6 +725,7 @@
             >;
 
             label = "Mouse";
+            sensor-bindings = <&enc_vol>, <&msc_scroll>;
         };
     };
 };
