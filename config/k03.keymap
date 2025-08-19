@@ -1,6 +1,7 @@
 #include "keys_ru.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
@@ -10,7 +11,7 @@
 
 &msc {
     acceleration-exponent = <1>;
-    time-to-max-speed-ms = <50>;
+    time-to-max-speed-ms = <0>;
 };
 
 / {
@@ -689,7 +690,7 @@
                 &trans        &trans      &trans        &trans  &trans        &trans  &trans        &trans     &trans    &trans
             >;
 
-            display-name = "Media";
+            display-name = "Media Nav";
             label = "Media Nav";
             sensor-bindings = <&enc_vol>;
         };
@@ -708,7 +709,7 @@
         };
 
         mouse {
-            display-name = "Navig";
+            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans    &trans    &trans                          &trans   &trans        &trans          &trans  &trans  &trans
 &trans  &trans  &trans  &trans    &trans    &trans                          &trans   &trans        &trans          &trans  &trans  &trans
