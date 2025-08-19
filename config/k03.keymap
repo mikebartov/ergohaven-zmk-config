@@ -442,6 +442,13 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        delete_worddoc: delete_worddoc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp ENTER>;
+            label = "DELETE_WORDDOC";
+        };
     };
 
     combos {
@@ -605,21 +612,21 @@
         macro_1_EN {
             label = "Hot-1 EN";
             bindings = <
-&trans  &trans  &trans         &trans         &trans         &trans                           &trans             &trans             &trans             &trans              &trans             &trans
-&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                    &kp LA(LC(LG(M)))  &kp LS(F3)         &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
-&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans    &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
-                &trans         &trans         &trans         &trans         &trans    &trans  &trans             &kp LC(LG(C))      &trans             &trans
+&trans  &trans  &trans         &trans         &trans         &trans                                    &trans             &trans             &trans             &trans              &trans             &trans
+&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                    &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
+&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                             &kp LA(LC(LG(M)))  &kp LS(F3)         &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
+&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans             &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
+                &trans         &trans         &trans         &trans         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
             >;
         };
 
         macro_1_RU {
             bindings = <
-&trans  &trans  &trans         &trans         &trans         &trans                           &trans             &trans             &trans             &trans              &trans             &trans
-&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                    &kp LA(LC(LG(M)))  &kp LS(F3)         &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
-&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans    &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
-                &trans         &trans         &trans         &trans         &trans    &trans  &trans             &kp LC(LG(C))      &trans             &trans
+&trans  &trans  &trans         &trans         &trans         &trans                                    &trans             &trans             &trans             &trans              &trans             &trans
+&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                    &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
+&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                             &kp LA(LC(LG(M)))  &kp LS(F3)         &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
+&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans             &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
+                &trans         &trans         &trans         &trans         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
             >;
 
             label = "Hot-1 RU";
@@ -721,11 +728,11 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans    &trans    &trans                              &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans                              &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &mkp MB2  &mkp MB1  &trans                              &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans        &trans    &kp LG(N0)  &trans   &trans        &trans          &trans  &trans  &trans
-                &trans  &trans    &trans    &lt 11 ENTER  &trans    &trans      &tog 15  &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans      &kp LG(N0)  &trans   &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
+                &trans  &trans  &trans  &lt 11 ENTER  &mkp MB1    &mkp MB2    &tog 15  &trans        &trans          &trans
             >;
 
             label = "Mouse";
