@@ -464,8 +464,8 @@
             layers = <0 2 11>;
         };
 
-        rclick {
-            bindings = <&mkp MB2>;
+        tg_mouse {
+            bindings = <&tog 15>;
             key-positions = <30 31>;
         };
 
@@ -702,17 +702,17 @@
             sensor-bindings = <&inc_dec_kp F24 F23>;
         };
 
-        nav {
+        mouse {
             display-name = "Navig";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp HOME   &kp UP    &kp END    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp PG_DN  &trans    &kp PG_UP  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans    &trans
+&trans  &trans  &trans  &trans    &trans    &trans                    &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans                    &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &mkp MB2  &mkp MB1  &trans                    &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans   &trans        &trans          &trans  &trans  &trans
+                &trans  &trans    &trans    &trans  &trans    &trans  &tog 15  &trans        &trans          &trans
             >;
 
-            label = "Navig";
+            label = "Mouse";
         };
     };
 };
