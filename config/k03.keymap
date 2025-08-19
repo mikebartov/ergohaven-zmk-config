@@ -8,6 +8,11 @@
     quick-tap-ms = <50>;
 };
 
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <50>;
+};
+
 / {
     behaviors {
         enc_vol: enc_vol {
@@ -705,11 +710,11 @@
         mouse {
             display-name = "Navig";
             bindings = <
-&trans  &trans  &trans  &trans    &trans    &trans                    &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans                    &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &mkp MB2  &mkp MB1  &trans                    &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans   &trans        &trans          &trans  &trans  &trans
-                &trans  &trans    &trans    &trans  &trans    &trans  &tog 15  &trans        &trans          &trans
+&trans  &trans  &trans  &trans    &trans    &trans                          &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans                          &trans   &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &mkp MB2  &mkp MB1  &trans                          &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans        &trans    &trans  &trans   &trans        &trans          &trans  &trans  &trans
+                &trans  &trans    &trans    &lt 11 ENTER  &trans    &trans  &tog 15  &trans        &trans          &trans
             >;
 
             label = "Mouse";
