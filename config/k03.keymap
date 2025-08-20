@@ -68,15 +68,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        msc_scroll: msc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "MSC_SCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <0>;
-        };
     };
 
     macros {
@@ -524,6 +515,11 @@
             key-positions = <27 28>;
             layers = <11 2 3>;
         };
+
+        tg_mouse2 {
+            bindings = <&tog 15>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
@@ -728,15 +724,15 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                &trans   &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans      &kp LG(N0)  &trans   &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
-                &trans  &trans  &trans  &lt 11 ENTER  &mkp MB1    &mkp MB2    &tog 15  &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans        &trans          &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(EQUAL)  &trans        &trans          &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(MINUS)  &msc SCRL_UP  &msc SCRL_DOWN  &kp LG(EQUAL)  &kp LG(MINUS)  &kp LG(N0)
+&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans    &kp LG(N0)     &kp PG_DN     &kp PG_UP       &trans         &trans         &trans
+                &trans  &trans  &trans  &lt 11 ENTER  &mkp MB1    &mkp MB2  &tog 15        &trans        &trans          &trans
             >;
 
             label = "Mouse";
-            sensor-bindings = <&enc_vol>, <&inc_dec_kp LG(EQUAL) LG(MINUS)>;
+            sensor-bindings = <&enc_vol>;
         };
     };
 };
