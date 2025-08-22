@@ -440,6 +440,13 @@
             bindings = <&kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp ENTER>;
             label = "DELETE_WORDDOC";
         };
+
+        quo_input: quo_input {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SEMI) &kp LS(LA(SEMI)) &kp LEFT>;
+            label = "QUO_INPUT";
+        };
     };
 
     combos {
@@ -479,11 +486,6 @@
             key-positions = <30 31>;
         };
 
-        lclick {
-            bindings = <&mkp MB1>;
-            key-positions = <28 29>;
-        };
-
         OSM_Shift {
             bindings = <&sk LSHFT>;
             key-positions = <28 31>;
@@ -516,9 +518,15 @@
             layers = <11 2 3>;
         };
 
-        tg_mouse2 {
-            bindings = <&tog 15>;
+        mo_mouse {
+            bindings = <&mo 15>;
             key-positions = <28 29>;
+        };
+
+        quo_input {
+            bindings = <&quo_input>;
+            key-positions = <39 40>;
+            layers = <3>;
         };
     };
 
@@ -724,15 +732,14 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans        &trans          &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(EQUAL)  &trans        &trans          &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(MINUS)  &msc SCRL_UP  &msc SCRL_DOWN  &kp LG(EQUAL)  &kp LG(MINUS)  &kp LG(N0)
-&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans    &kp LG(N0)     &kp PG_DN     &kp PG_UP       &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(EQUAL)  &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(MINUS)  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans    &kp LG(N0)     &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
                 &trans  &trans  &trans  &lt 11 ENTER  &mkp MB1    &mkp MB2  &tog 15        &trans        &trans          &trans
             >;
 
             label = "Mouse";
-            sensor-bindings = <&enc_vol>;
         };
     };
 };
