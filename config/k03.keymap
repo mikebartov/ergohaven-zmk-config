@@ -472,7 +472,13 @@
         cels_en: cels_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&ru LA(SPACE) &ru LS(LA(N8)) &kp RS(C)>;
+            bindings =
+                <&ru LA(SPACE)>,
+                <&macro_wait_time 20>,
+                <&ru LS(LA(N8))>,
+                <&macro_wait_time 20>,
+                <&kp RS(C)>;
+
             label = "CELS_EN";
             tap-ms = <30>;
             wait-ms = <0>;
@@ -548,8 +554,8 @@
             layers = <11 2 3>;
         };
 
-        mo_mouse {
-            bindings = <&mo 15>;
+        shortcat {
+            bindings = <&kp LS(LG(SPACE))>;
             key-positions = <28 29>;
         };
 
@@ -565,11 +571,11 @@
 
         base_EN {
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)            &kp LG(N3)     &kp LG(N2)     &kp LG(N1)                                  &kp LA(N1)  &kp LA(N2)     &kp LA(N3)     &kp LA(N4)     &kp LA(N5)      &kp LA(N6)
-&kp F12        &kp Q        &kp W                 &kp E          &kp R          &kp T                                       &kp Y       &kp U          &kp I          &kp O          &kp P           &trans
-&caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &lt 10 G                                    &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &trans
-&toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &none          &kp LS(LC(V))  &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
-                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &lt 13 TAB     &lt 11 ENTER  &lt 2 SPACE    &bspc_del      &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
+&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)            &kp LG(N3)     &kp LG(N2)     &kp LG(N1)                                    &kp LA(N1)  &kp LA(N2)     &kp LA(N3)     &kp LA(N4)     &kp LA(N5)      &kp LA(N6)
+&kp F12        &kp Q        &kp W                 &kp E          &kp R          &kp T                                         &kp Y       &kp U          &kp I          &kp O          &kp P           &sk LEFT_SHIFT
+&caps_word     &hrm LCMD A  &hrm LCTRL S          &hrm LALT D    &hrm LSHIFT F  &lt 10 G                                      &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L   &hrm RCMD SEMI  &trans
+&toEn          &mt LG(Z) Z  &mt LG(X) X           &mt LG(C) C    &mt LG(V) V    &kp B         &kp LS(LC(R))    &kp LS(LC(V))  &kp N       &kp M          &none          &none          &kp LS(LG(N8))  &toRu
+                            &kp LS(LA(LG(RBKT)))  &kp LA(LG(C))  &lt 15 TAB     &lt 11 ENTER  &lt 2 SPACE      &bspc_del      &lt 6 ESC   &lt 8 TAB      &kp LS(LG(P))  &kp LG(COMMA)
             >;
 
             display-name = "EN";
@@ -579,11 +585,11 @@
         base_RU {
             display-name = "RU";
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                       &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
-&kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
-&caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
-                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &lt 13 TAB                &lt 12 ENTER                       &lt 3 SPACE    &bspc_del      &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))             &kp LG(COMMA)
+&kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                         &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                             &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
+&kp F12        &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &sk LEFT_SHIFT
+&caps_word     &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                              &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LS(LC(R))    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &en LS(LG(N8))             &toRu
+                                         &kp LS(LA(LG(RBKT)))         &kp LA(LG(C))             &lt 15 TAB                &lt 12 ENTER                       &lt 3 SPACE      &bspc_del      &lt 7 ESC           &lt 9 TAB                                        &kp LS(LG(P))                          &kp LG(COMMA)
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -650,8 +656,10 @@
 &trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                    &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
 &trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                             &kp LA(LC(LG(M)))  &kp LS(F3)         &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
 &trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans             &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
-                &trans         &trans         &trans         &trans         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
+                &trans         &trans         &trans         &mo 14         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
             >;
+
+            sensor-bindings = <&enc_vol>, <&enc_vol>;
         };
 
         macro_1_RU {
@@ -660,7 +668,7 @@
 &trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                    &kp LA(LG(N6))     &kp LA(LG(N7))     &kp LA(LG(N8))     &trans              &trans             &trans
 &trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                             &kp LA(LC(LG(M)))  &kp LS(F3)         &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
 &trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans         &trans             &trans  &trans             &kp LA(LC(LG(C)))  &kp LA(LC(LG(F)))  &trans              &trans             &trans
-                &trans         &trans         &trans         &trans         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
+                &trans         &trans         &trans         &mo 14         &delete_worddoc    &trans  &trans             &kp LC(LG(C))      &trans             &trans
             >;
 
             label = "Hot-1 RU";
@@ -672,7 +680,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans       &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LC(A))  &no_spreads  &odd_spreads  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_width     &fit_height  &trans        &trans  &trans
-                &trans  &trans  &trans  &trans  &mo 14    &trans  &trans  &trans         &trans       &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans       &trans
             >;
 
             label = "Hot-2 EN";
@@ -684,7 +692,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans         &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &en LA(LC(A))  &no_spreads_ru  &odd_spreads_ru  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &fit_height    &fit_width      &trans           &trans  &trans
-                &trans  &trans  &trans  &trans  &mo 14    &trans  &trans  &trans         &trans          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans          &trans
             >;
 
             label = "Hot-2 RU";
@@ -734,16 +742,15 @@
 
         media_nav {
             bindings = <
-&trans  &trans  &trans        &trans      &trans        &trans                        &trans        &trans     &trans    &trans     &trans         &trans
-&trans  &trans  &trans        &trans      &trans        &trans                        &trans        &kp HOME   &kp UP    &kp END    &trans         &trans
-&trans  &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                        &kp LA(LEFT)  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LA(RIGHT)  &trans
-&trans  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &kp C_MUTE    &trans  &trans        &kp PG_DN  &trans    &kp PG_UP  &trans         &trans
-                &trans        &trans      &trans        &trans  &trans        &trans  &trans        &trans     &trans    &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &trans     &trans    &trans     &trans         &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &kp HOME   &kp UP    &kp END    &trans         &trans
+&trans  &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                    &kp LA(LEFT)  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LA(RIGHT)  &trans
+&trans  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans    &trans  &trans        &kp PG_DN  &trans    &kp PG_UP  &trans         &trans
+                &trans        &trans      &trans        &trans  &trans    &trans  &trans        &trans     &trans    &trans
             >;
 
             display-name = "Media Nav";
             label = "Media Nav";
-            sensor-bindings = <&enc_vol>;
         };
 
         emerg {
@@ -762,11 +769,11 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans         &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(EQUAL)  &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp LG(MINUS)  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans    &kp LG(N0)     &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
-                &trans  &trans  &trans  &lt 11 ENTER  &mkp MB1    &mkp MB2  &tog 15        &trans        &trans          &trans
+&trans  &trans  &trans        &trans         &trans        &trans                              &trans         &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans        &trans         &trans        &trans                              &kp LG(EQUAL)  &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &kp C_PREV    &kp C_PP       &kp C_NEXT    &trans                              &kp LG(MINUS)  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &kp C_VOL_DN  &kp C_MUTE     &kp C_VOL_UP  &trans        &trans      &trans    &kp LG(N0)     &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
+                &trans        &kp LA(LG(C))  &trans        &lt 11 ENTER  &mkp MB1    &mkp MB2  &tog 15        &trans        &trans          &trans
             >;
 
             label = "Mouse";
