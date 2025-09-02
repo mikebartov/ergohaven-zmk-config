@@ -554,8 +554,8 @@
             layers = <9 2 3>;
         };
 
-        shortcat {
-            bindings = <&kp LS(LG(SPACE))>;
+        mb1 {
+            bindings = <&mkp MB1>;
             key-positions = <28 29>;
         };
 
@@ -716,11 +716,11 @@
 
         media_nav {
             bindings = <
-&trans  &trans  &trans        &trans      &trans        &trans                    &trans  &trans        &trans      &trans        &trans         &trans
-&trans  &trans  &trans        &trans      &trans        &trans                    &trans  &kp PG_UP     &kp PG_DN   &kp HOME      &kp END        &trans
-&trans  &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                    &trans  &kp DOWN      &kp UP      &kp LEFT      &kp RIGHT      &trans
-&trans  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans    &trans  &trans  &kp LA(DOWN)  &kp LA(UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &trans
-                &trans        &trans      &trans        &trans  &trans    &trans  &trans  &trans        &trans      &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &trans     &trans     &trans     &trans         &trans
+&trans  &trans  &trans        &trans      &trans        &trans                    &trans        &kp HOME   &kp UP     &kp END    &trans         &trans
+&trans  &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans                    &kp LA(LEFT)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp LA(RIGHT)  &trans
+&trans  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans    &trans  &trans        &kp PG_DN  &kp PG_UP  &trans     &trans         &trans
+                &trans        &trans      &trans        &trans  &trans    &trans  &trans        &trans     &trans     &trans
             >;
 
             display-name = "Media Nav";
@@ -743,11 +743,11 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans                         &trans         &trans     &trans                             &trans    &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans                         &trans         &trans     &trans                             &trans    &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &kp LG(R)                      &kp LG(N)      &kp LG(O)  &trans                             &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans                         &trans         &trans     &trans       &trans    &kp LG(N0)  &trans    &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
-                &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(C))  &trans     &lt 9 ENTER  &trans    &trans      &trans    &trans        &trans          &trans
+&trans  &trans  &trans                         &trans         &trans     &trans                               &trans    &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans                         &trans         &trans     &trans                               &trans    &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &kp LG(R)                      &kp LG(N)      &kp LG(O)  &trans                               &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans                         &trans         &trans     &trans       &trans      &kp LG(N0)  &trans    &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
+                &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(C))  &trans     &lt 9 ENTER  &mkp MB1    &trans      &trans    &trans        &trans          &trans
             >;
 
             label = "Mouse";
