@@ -575,7 +575,7 @@
 &trans         &kp Q        &kp W         &kp E              &kp R          &kp T                                        &kp Y       &kp U          &kp I          &kp O         &kp P           &trans
 &kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D        &hrm LSHIFT F  &lt 8 G                                      &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C        &mt LG(V) V    &kp B        &kp LS(LC(R))    &kp LS(LC(V))  &kp N       &kp M          &none          &none         &none           &toRu
-                            &trans        &kp LS(LG(SPACE))  &lt 11 TAB     &lt 9 ENTER  &lt 2 SPACE      &remove        &lt 13 ESC  &mo 6          &kp LS(LG(P))  &trans
+                            &kp RCMD      &kp LS(LG(SPACE))  &lt 11 TAB     &lt 9 ENTER  &lt 2 SPACE      &remove        &lt 13 ESC  &mo 6          &kp LS(LG(P))  &kp LALT
             >;
 
             display-name = "EN";
@@ -589,7 +589,7 @@
 &trans         &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
 &kp CAPS       &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 8 RU_CYRILLIC_PE                                               &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LS(LC(R))    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
-                                         &trans                       &kp LS(LG(SPACE))         &lt 11 TAB                &lt 10 ENTER                       &lt 3 SPACE      &remove        &lt 13 ESC          &mo 7                                            &kp LS(LG(P))                          &trans
+                                         &kp RCMD                     &kp LS(LG(SPACE))         &lt 11 TAB                &lt 10 ENTER                       &lt 3 SPACE      &remove        &lt 13 ESC          &mo 7                                            &kp LS(LG(P))                          &kp LALT
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
