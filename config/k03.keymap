@@ -491,12 +491,7 @@
         R_CMD {
             bindings = <&kp RCMD>;
             key-positions = <44 30>;
-            layers = <0 1>;
-        };
-
-        arrow_layer {
-            bindings = <&mo 7>;
-            key-positions = <56 44>;
+            layers = <6>;
         };
 
         UC_layer {
@@ -517,41 +512,28 @@
             layers = <0 2 4>;
         };
 
-        tg_mouse {
-            bindings = <&tog 7>;
-            key-positions = <30 31>;
-        };
-
         OSM_Shift {
             bindings = <&sk LSHFT>;
             key-positions = <28 31>;
+            layers = <0 1>;
         };
 
         opt_hyphen {
             bindings = <&kp LA(LC(MINUS))>;
             key-positions = <45 46>;
+            layers = <8 9>;
         };
 
         nbhyphen {
             bindings = <&kp LC(LG(MINUS))>;
             key-positions = <31 45>;
-        };
-
-        nbsp_emdash_ru {
-            bindings = <&nbsp_emdash_ru>;
-            key-positions = <20 32>;
-        };
-
-        nbsp_dash_en {
-            bindings = <&nbsp_emdash_en>;
-            key-positions = <20 32>;
-            layers = <0 2>;
+            layers = <8 9>;
         };
 
         par_input {
             bindings = <&par_input>;
             key-positions = <27 28>;
-            layers = <4 2 3>;
+            layers = <4 2 3 5>;
         };
 
         mb1 {
@@ -571,11 +553,11 @@
 
         base_EN {
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)    &kp LG(N3)         &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)     &kp LA(N3)     &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
-&trans         &kp Q        &kp W         &kp E              &kp R          &kp T                                        &kp Y       &kp U          &kp I          &kp O         &kp P           &trans
-&kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D        &hrm LSHIFT F  &lt 10 G                                     &kp H       &hrm RSHIFT J  &hrm RALT K    &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
-&toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C        &mt LG(V) V    &kp B        &kp LS(LC(R))    &kp LS(LC(V))  &kp N       &kp M          &none          &none         &none           &toRu
-                            &kp RCMD      &kp LS(LG(SPACE))  &lt 6 TAB      &lt 4 ENTER  &lt 2 SPACE      &remove        &lt 7 ESC   &mo 8          &kp LS(LG(P))  &kp LALT
+&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)    &kp LG(N3)         &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)           &kp LA(N3)     &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
+&trans         &kp Q        &kp W         &kp E              &kp R          &kp T                                        &kp Y       &kp U                &kp I          &kp O         &kp P           &trans
+&kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D        &hrm LSHIFT F  &lt 10 G                                     &kp H       &hrm RSHIFT J        &hrm RALT K    &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
+&toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C        &mt LG(V) V    &kp B        &kp LS(LC(R))    &kp LS(LC(V))  &kp N       &kp M                &none          &none         &none           &toRu
+                            &kp RCMD      &kp LS(LG(SPACE))  &lt 6 TAB      &lt 4 ENTER  &lt 2 SPACE      &remove        &lt 7 ESC   &lt 8 LS(LG(SPACE))  &kp LS(LG(P))  &tog 7
             >;
 
             display-name = "EN";
@@ -589,7 +571,7 @@
 &trans         &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
 &kp CAPS       &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                              &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LS(LC(R))    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
-                                         &kp RCMD                     &kp LS(LG(SPACE))         &lt 6 TAB                 &lt 5 ENTER                        &lt 3 SPACE      &remove        &lt 7 ESC           &mo 9                                            &kp LS(LG(P))                          &kp LALT
+                                         &kp RCMD                     &kp LS(LG(SPACE))         &lt 6 TAB                 &lt 5 ENTER                        &lt 3 SPACE      &remove        &lt 7 ESC           &lt 9 LS(LG(SPACE))                              &kp LS(LG(P))                          &tog 7
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -597,11 +579,11 @@
 
         sym_EN {
             bindings = <
-&trans          &trans    &trans    &trans        &trans            &trans                              &trans        &trans     &trans               &trans     &trans     &trans
-&trans          &trans    &trans    &kp LBRC      &kp RBRC          &kp GRAVE                           &kp CARET     &kp HASH   &kp DLLR             &kp AMPS   &trans     &trans
-&kp AT          &kp LBKT  &kp RBKT  &kp LPAR      &kp RPAR          &kp DQT                             &kp QUESTION  &kp EXCL   &td_dash_en 0 MINUS  &kp PLUS   &kp EQUAL  &kp TILDE
-&ru LS(LA(N4))  &kp LT    &kp GT    &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp SEMI   &trans    &kp LG(N0)     &kp COLON     &kp FSLH   &kp UNDER            &kp BSLH   &kp PIPE   &ru RU_RUBLE
-                          &trans    &trans        &trans            &trans     &trans    &comma_spc_en  &kp DOT       &kp PRCNT  &ru LS(LA(MINUS))    &ru LA(H)
+&trans          &trans    &trans            &trans        &trans            &trans                              &trans        &trans     &trans               &trans     &trans     &trans
+&trans          &trans    &kp SINGLE_QUOTE  &kp LBRC      &kp RBRC          &kp GRAVE                           &kp CARET     &kp HASH   &kp DLLR             &kp AMPS   &trans     &trans
+&kp AT          &kp LBKT  &kp RBKT          &kp LPAR      &kp RPAR          &kp DQT                             &kp QUESTION  &kp EXCL   &td_dash_en 0 MINUS  &kp PLUS   &kp EQUAL  &kp TILDE
+&ru LS(LA(N4))  &kp LT    &kp GT            &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp SEMI   &trans    &kp LG(N0)     &kp COLON     &kp FSLH   &kp UNDER            &kp BSLH   &kp PIPE   &ru RU_RUBLE
+                          &trans            &trans        &trans            &trans     &trans    &comma_spc_en  &kp DOT       &kp PRCNT  &ru LS(LA(MINUS))    &ru LA(H)
             >;
 
             display-name = "Sym EN";
@@ -612,11 +594,11 @@
 
         sym_RU {
             bindings = <
-&trans          &trans    &trans    &trans        &trans            &trans                                &trans           &trans        &trans                  &trans       &trans        &trans
-&trans          &trans    &trans    &en LBRC      &en RBRC          &en GRAVE                             &en CARET        &en HASH      &en DLLR                &en AMPS     &trans        &trans
-&en AT          &en LBKT  &en RBKT  &kp LPAR      &kp RPAR          &kp RU_DQT                            &kp RU_QUESTION  &kp RU_EXCL   &td_dash_ru 0 RU_MINUS  &kp RU_PLUS  &kp RU_EQUAL  &en TILDE
-&kp LS(LA(N4))  &en LT    &en GT    &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp RU_SEMI  &trans    &kp LG(N0)     &kp RU_COLON     &kp RU_FSLH   &kp UNDER               &kp RU_BSLH  &en PIPE      &kp RU_RUBLE
-                          &trans    &trans        &trans            &trans       &trans    &comma_spc_ru  &kp RU_DOT       &kp RU_PRCNT  &kp LS(LA(MINUS))       &kp LA(H)
+&trans          &trans    &trans            &trans        &trans            &trans                                &trans           &trans        &trans                  &trans       &trans        &trans
+&trans          &trans    &kp SINGLE_QUOTE  &en LBRC      &en RBRC          &en GRAVE                             &en CARET        &en HASH      &en DLLR                &en AMPS     &trans        &trans
+&en AT          &en LBKT  &en RBKT          &kp LPAR      &kp RPAR          &kp RU_DQT                            &kp RU_QUESTION  &kp RU_EXCL   &td_dash_ru 0 RU_MINUS  &kp RU_PLUS  &kp RU_EQUAL  &en TILDE
+&kp LS(LA(N4))  &en LT    &en GT            &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp RU_SEMI  &trans    &kp LG(N0)     &kp RU_COLON     &kp RU_FSLH   &kp UNDER               &kp RU_BSLH  &en PIPE      &kp RU_RUBLE
+                          &trans            &trans        &trans            &trans       &trans    &comma_spc_ru  &kp RU_DOT       &kp RU_PRCNT  &kp LS(LA(MINUS))       &kp LA(H)
             >;
 
             label = "Sym RU";
@@ -655,11 +637,11 @@
 
         media_nav {
             bindings = <
-&trans  &trans    &trans        &trans      &trans          &trans                    &trans        &trans     &trans     &trans     &trans         &trans
-&trans  &trans    &trans        &trans      &trans          &trans                    &trans        &kp HOME   &kp UP     &kp END    &trans         &trans
-&trans  &kp LCMD  &kp LCTRL     &kp LALT    &kp LEFT_SHIFT  &trans                    &kp LA(LEFT)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp LA(RIGHT)  &trans
-&trans  &trans    &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP    &trans  &trans    &trans  &trans        &kp PG_DN  &kp PG_UP  &trans     &trans         &trans
-                  &trans        &trans      &trans          &trans  &trans    &trans  &trans        &trans     &trans     &trans
+&trans  &trans    &trans             &trans          &trans                  &trans                       &trans        &trans     &trans     &trans     &trans         &trans
+&trans  &trans    &trans             &trans          &trans                  &trans                       &trans        &kp HOME   &kp UP     &kp END    &trans         &trans
+&trans  &kp LCMD  &hrm LCTRL C_PREV  &hrm LALT C_PP  &hrm LEFT_SHIFT C_NEXT  &trans                       &kp LA(LEFT)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp LA(RIGHT)  &trans
+&trans  &trans    &kp C_VOL_DN       &kp C_MUTE      &kp C_VOL_UP            &trans  &trans       &trans  &trans        &kp PG_DN  &kp PG_UP  &trans     &trans         &trans
+                  &trans             &trans          &trans                  &trans  &kp SPACE    &trans  &trans        &trans     &trans     &trans
             >;
 
             display-name = "Media Nav";
