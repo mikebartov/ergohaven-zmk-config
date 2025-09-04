@@ -595,7 +595,7 @@
         sym_RU {
             bindings = <
 &trans          &trans    &trans            &trans        &trans            &trans                                &trans           &trans        &trans                  &trans       &trans        &trans
-&trans          &trans    &kp SINGLE_QUOTE  &en LBRC      &en RBRC          &en GRAVE                             &en CARET        &en HASH      &en DLLR                &en AMPS     &trans        &trans
+&trans          &trans    &en SINGLE_QUOTE  &en LBRC      &en RBRC          &en GRAVE                             &en CARET        &en HASH      &en DLLR                &en AMPS     &trans        &trans
 &en AT          &en LBKT  &en RBKT          &kp LPAR      &kp RPAR          &kp RU_DQT                            &kp RU_QUESTION  &kp RU_EXCL   &td_dash_ru 0 RU_MINUS  &kp RU_PLUS  &kp RU_EQUAL  &en TILDE
 &kp LS(LA(N4))  &en LT    &en GT            &kp LA(SEMI)  &kp LS(LA(SEMI))  &kp RU_SEMI  &trans    &kp LG(N0)     &kp RU_COLON     &kp RU_FSLH   &kp UNDER               &kp RU_BSLH  &en PIPE      &kp RU_RUBLE
                           &trans            &trans        &trans            &trans       &trans    &comma_spc_ru  &kp RU_DOT       &kp RU_PRCNT  &kp LS(LA(MINUS))       &kp LA(H)
@@ -637,16 +637,16 @@
 
         media_nav {
             bindings = <
-&trans  &trans    &trans             &trans          &trans                  &trans                       &trans        &trans     &trans     &trans     &trans         &trans
-&trans  &trans    &trans             &trans          &trans                  &trans                       &trans        &kp HOME   &kp UP     &kp END    &trans         &trans
-&trans  &kp LCMD  &hrm LCTRL C_PREV  &hrm LALT C_PP  &hrm LEFT_SHIFT C_NEXT  &trans                       &kp LA(LEFT)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp LA(RIGHT)  &trans
-&trans  &trans    &kp C_VOL_DN       &kp C_MUTE      &kp C_VOL_UP            &trans  &trans       &trans  &trans        &kp PG_DN  &kp PG_UP  &trans     &trans         &trans
-                  &trans             &trans          &trans                  &trans  &kp SPACE    &trans  &trans        &trans     &trans     &trans
+&trans  &trans    &trans             &trans          &trans                  &trans                        &trans        &trans        &trans          &trans     &trans         &trans
+&trans  &trans    &trans             &trans          &trans                  &trans                        &trans        &kp HOME      &kp UP          &kp END    &trans         &trans
+&trans  &kp RCMD  &hrm LCTRL C_PREV  &hrm LALT C_PP  &hrm LEFT_SHIFT C_NEXT  &trans                        &kp LA(LEFT)  &kp LEFT      &kp DOWN        &kp RIGHT  &kp LA(RIGHT)  &trans
+&trans  &trans    &kp C_VOL_DN       &kp C_MUTE      &kp C_VOL_UP            &trans    &trans      &trans  &trans        &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans         &trans
+                  &trans             &trans          &trans                  &mkp MB1  &mkp MB2    &trans  &trans        &trans        &trans          &trans
             >;
 
             display-name = "Media Nav";
             label = "Media Nav";
-            sensor-bindings = <&enc_vol>, <&inc_dec_kp F24 F23>;
+            sensor-bindings = <&enc_vol>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         mouse {
