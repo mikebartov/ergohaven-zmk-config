@@ -652,11 +652,11 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans                         &trans         &trans     &trans                                &trans    &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &trans                         &trans         &trans     &trans                                &trans    &trans        &trans          &trans  &trans  &trans
-&trans  &trans  &kp LG(R)                      &kp LG(N)      &kp LG(O)  &trans                                &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans                         &trans         &trans     &trans       &trans       &kp LG(N0)  &trans    &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
-                &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(C))  &trans     &lt 4 ENTER  &kp SPACE    &trans      &trans    &trans        &trans          &trans
+&trans  &trans  &trans                         &trans         &trans     &trans                               &trans    &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &trans                         &trans         &trans     &trans                               &trans    &trans        &trans          &trans  &trans  &trans
+&trans  &trans  &kp LG(R)                      &kp LG(N)      &kp LG(O)  &trans                               &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &trans  &trans  &trans
+&trans  &trans  &trans                         &trans         &trans     &trans       &trans      &kp LG(N0)  &trans    &kp PG_DN     &kp PG_UP       &trans  &trans  &trans
+                &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(C))  &trans     &lt 4 ENTER  &mkp MB1    &trans      &trans    &trans        &trans          &trans
             >;
 
             label = "Mouse";
