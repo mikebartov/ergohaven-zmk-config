@@ -37,7 +37,7 @@
             bindings = <&lt 6 BSPC>, <&kp DEL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         td_dash_en: td_dash_en {
@@ -560,11 +560,11 @@
 
         base_EN {
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)    &kp LG(N3)   &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)           &kp LA(N3)   &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
-&trans         &kp Q        &kp W         &kp E        &kp R          &kp T                                        &kp Y       &kp U                &kp I        &kp O         &kp P           &trans
-&kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &kp G                                        &kp H       &hrm RSHIFT J        &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
-&toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &kp LS(LC(R))    &kp LS(LC(V))  &kp N       &kp M                &none        &none         &none           &toRu
-                            &trans        &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE      &remove        &lt 7 ESC   &lt 9 LS(LG(SPACE))  &trans       &trans
+&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)    &kp LG(N3)   &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)     &kp LA(N3)   &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
+&trans         &kp Q        &kp W         &kp E        &kp R          &kp T                                        &kp Y       &kp U          &kp I        &kp O         &kp P           &trans
+&kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &kp G                                        &kp H       &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
+&toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &ru LA(SPACE)    &kp LS(LC(V))  &kp N       &kp M          &none        &none         &none           &toRu
+                            &trans        &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE      &lt 6 BSPC     &lt 7 ESC   &lt 9 DEL      &trans       &trans
             >;
 
             display-name = "EN";
@@ -577,8 +577,8 @@
 &kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                         &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                             &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
 &trans         &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
 &kp CAPS       &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                                 &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &sk LEFT_SHIFT
-&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LS(LC(R))    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
-                                         &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE      &remove        &lt 8 ESC           &lt 9 LS(LG(SPACE))                              &trans                                 &trans
+&toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LA(SPACE)    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
+                                         &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE      &lt 6 BSPC     &lt 8 ESC           &lt 9 DEL                                        &trans                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -656,21 +656,21 @@
         macro_EN {
             label = "Hot EN";
             bindings = <
-&trans  &trans  &trans         &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                                &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
-&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans            &trans    &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LS(LG(N8))     &trans
-                &trans         &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads        &odd_spreads
+&trans  &trans  &trans  &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans         &trans         &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
+&trans  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &trans                                       &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
+&trans  &trans  &trans  &trans         &trans         &trans            &kp F1    &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LS(LG(N8))     &kp LA(LC(LG(L)))
+                &trans  &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads        &odd_spreads
             >;
         };
 
         macro_RU {
             bindings = <
-&trans  &trans  &trans         &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans         &trans         &kp LA(LG(R))  &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &kp F1  &kp LS(LC(D))  &kp LA(MINUS)  &kp LS(LG(M))  &kp LS(LG(I))                                &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
-&trans  &trans  &trans         &kp LS(LG(C))  &kp LS(LG(K))  &trans            &trans    &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LS(LG(N8))     &trans
-                &trans         &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads_ru     &odd_spreads_ru
+&trans  &trans  &trans  &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans         &trans         &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
+&trans  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &trans                                       &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
+&trans  &trans  &trans  &trans         &trans         &trans            &kp F1    &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LS(LG(N8))     &kp LA(LC(LG(L)))
+                &trans  &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads_ru     &odd_spreads_ru
             >;
 
             label = "Hot RU";
@@ -724,7 +724,7 @@
                   &trans     &trans    &trans     &trans  &trans    &trans  &trans  &trans  &kp U   &kp B
             >;
 
-            sensor-bindings = <&inc_dec_kp F24 F23>;
+            sensor-bindings = <&inc_dec_kp F24 F23>, <&inc_dec_kp F24 F23>;
         };
     };
 };
