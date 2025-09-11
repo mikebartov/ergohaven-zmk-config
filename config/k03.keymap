@@ -553,6 +553,18 @@
             key-positions = <29 28>;
             layers = <0 1>;
         };
+
+        view_formatting_marks_en {
+            bindings = <&kp LS(LG(N8))>;
+            key-positions = <30 31>;
+            layers = <0>;
+        };
+
+        view_formatting_marks_ru {
+            bindings = <&en LS(LG(N8))>;
+            key-positions = <30 31>;
+            layers = <1>;
+        };
     };
 
     keymap {
