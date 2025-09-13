@@ -702,7 +702,10 @@
 
             display-name = "WM";
             label = "WM";
-            sensor-bindings = <&enc_vol>, <&inc_dec_kp LG(EQUAL) LG(MINUS)>;
+            sensor-bindings =
+                <&enc_vol>,
+                <&inc_dec_kp LG(EQUAL) LG(MINUS)>,
+                <&enc_vol>;
         };
 
         uc_EN {
