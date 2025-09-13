@@ -27,8 +27,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <50>;
+            flavor = "balanced";
+            require-prior-idle-ms = <30>;
         };
 
         remove: remove {
@@ -668,11 +668,11 @@
         macro_EN {
             label = "Hot EN";
             bindings = <
-&trans  &trans  &trans  &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans         &trans         &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &trans                                       &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
-&trans  &trans  &trans  &trans         &trans         &trans            &kp F1    &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LS(LG(N8))     &kp LA(LC(LG(L)))
-                &trans  &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads        &odd_spreads
+&trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
+&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LS(LG(N8))     &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads        &odd_spreads
             >;
 
             sensor-bindings = <&enc_vol>, <&enc_vol>;
@@ -680,11 +680,11 @@
 
         macro_RU {
             bindings = <
-&trans  &trans  &trans  &trans         &trans         &trans                                       &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans         &trans         &trans                                       &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &trans              &trans             &trans
-&trans  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &trans                                       &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
-&trans  &trans  &trans  &trans         &trans         &trans            &kp F1    &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LS(LG(N8))     &kp LA(LC(LG(L)))
-                &trans  &trans         &trans         &lt 12 LG(ENTER)  &trans    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads_ru     &odd_spreads_ru
+&trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
+&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LS(LG(N8))     &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads_ru     &odd_spreads_ru
             >;
 
             label = "Hot RU";
@@ -693,11 +693,11 @@
 
         wind_man {
             bindings = <
-&trans  &trans  &trans                         &trans           &trans       &trans                        &trans             &trans             &trans             &trans             &trans             &trans
-&trans  &trans  &trans                         &trans           &trans       &trans                        &trans             &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans             &trans
-&trans  &trans  &trans                         &kp LS(LC(TAB))  &kp LC(TAB)  &trans                        &kp LS(LA(LG(G)))  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(A)))  &trans
-&trans  &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(C))    &trans       &trans  &trans    &kp LG(N0)  &trans             &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &trans             &trans
-                &trans                         &trans           &trans       &trans  &trans    &trans      &trans             &trans             &trans             &trans
+&trans                         &trans                &trans                 &trans           &trans         &trans                        &trans             &trans             &trans             &trans             &trans             &trans
+&trans                         &trans                &trans                 &trans           &trans         &trans                        &trans             &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans             &trans
+&kp LS(LA(LG(RIGHT_BRACKET)))  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(LC(TAB))  &kp LC(TAB)    &trans                        &kp LS(LA(LG(G)))  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(A)))  &trans
+&trans                         &trans                &trans                 &trans           &kp LA(LG(C))  &trans  &trans    &kp LG(N0)  &trans             &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &trans             &trans
+                                                     &trans                 &trans           &trans         &trans  &trans    &trans      &trans             &trans             &trans             &trans
             >;
 
             display-name = "WM";
