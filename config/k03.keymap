@@ -565,6 +565,48 @@
             key-positions = <30 31>;
             layers = <1>;
         };
+
+        CMD_1 {
+            bindings = <&kp LG(N1)>;
+            key-positions = <17 29>;
+            layers = <0 1>;
+        };
+
+        CMD_2 {
+            bindings = <&kp LG(N2)>;
+            key-positions = <16 28>;
+            layers = <0 1>;
+        };
+
+        CMD_3 {
+            bindings = <&kp LG(N3)>;
+            key-positions = <15 27>;
+            layers = <0 1>;
+        };
+
+        CMD_4 {
+            bindings = <&kp LG(N4)>;
+            key-positions = <14 26>;
+            layers = <0 1>;
+        };
+
+        ALT_1 {
+            bindings = <&kp LA(N1)>;
+            key-positions = <18 30>;
+            layers = <0 1>;
+        };
+
+        ALT_2 {
+            bindings = <&kp LA(N2)>;
+            key-positions = <19 31>;
+            layers = <0 1>;
+        };
+
+        ALT_3 {
+            bindings = <&kp LA(N3)>;
+            key-positions = <20 32>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
@@ -573,7 +615,7 @@
         base_EN {
             bindings = <
 &kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)      &kp LG(N3)   &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)     &kp LA(N3)   &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
-&trans         &kp Q        &kp W           &kp E        &kp R          &kp T                                        &kp Y       &kp U          &kp I        &kp O         &kp P           &trans
+&kp LC(LG(Q))  &kp Q        &kp W           &kp E        &kp R          &kp T                                        &kp Y       &kp U          &kp I        &kp O         &kp P           &trans
 &kp CAPS       &hrm LCMD A  &hrm LCTRL S    &hrm LALT D  &hrm LSHIFT F  &kp G                                        &kp H       &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) Z  &mt LG(X) X     &mt LG(C) C  &mt LG(V) V    &kp B        &ru LA(SPACE)    &kp LS(LC(V))  &kp N       &kp M          &none        &none         &none           &toRu
                             &skCMD_NUM 0 G  &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE      &lt 6 BSPC     &lt 7 ESC   &lt 9 DEL      &trans       &trans
@@ -587,7 +629,7 @@
             display-name = "RU";
             bindings = <
 &kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                         &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                             &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
-&trans         &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
+&kp LC(LG(Q))  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
 &kp CAPS       &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                                 &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LA(SPACE)    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
                                          &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE      &lt 6 BSPC     &lt 8 ESC           &lt 9 DEL                                        &trans                                 &trans
