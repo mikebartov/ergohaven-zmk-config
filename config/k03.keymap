@@ -614,11 +614,11 @@
 
         base_EN {
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)   &kp LG(N4)      &kp LG(N3)   &kp LG(N2)     &kp LG(N1)                                   &kp LA(N1)  &kp LA(N2)     &kp LA(N3)   &kp LA(N4)    &kp LA(N5)      &kp LA(N6)
-&kp LC(LG(Q))  &kp Q        &kp W           &kp E        &kp R          &kp T                                        &kp Y       &kp U          &kp I        &kp O         &kp P           &trans
-&kp CAPS       &hrm LCMD A  &hrm LCTRL S    &hrm LALT D  &hrm LSHIFT F  &kp G                                        &kp H       &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
-&toEn          &mt LG(Z) Z  &mt LG(X) X     &mt LG(C) C  &mt LG(V) V    &kp B        &ru LA(SPACE)    &kp LS(LC(V))  &kp N       &kp M          &none        &none         &none           &toRu
-                            &skCMD_NUM 0 G  &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE      &lt 6 BSPC     &lt 7 ESC   &lt 9 DEL      &trans       &trans
+&trans         &trans       &trans        &trans       &trans         &trans                                       &trans     &trans         &trans       &trans        &trans          &trans
+&kp LC(LG(Q))  &kp Q        &kp W         &kp E        &kp R          &kp T                                        &kp Y      &kp U          &kp I        &kp O         &kp P           &trans
+&kp CAPS       &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &kp G                                        &kp H      &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &sk LEFT_SHIFT
+&toEn          &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &ru LA(SPACE)    &kp LS(LC(V))  &kp N      &kp M          &none        &none         &none           &toRu
+                            &trans        &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE      &lt 6 BSPC     &lt 7 ESC  &lt 9 DEL      &trans       &trans
             >;
 
             display-name = "EN";
@@ -628,7 +628,7 @@
         base_RU {
             display-name = "RU";
             bindings = <
-&kp LC(LG(Q))  &kp LG(N5)                &kp LG(N4)                   &kp LG(N3)                &kp LG(N2)                &kp LG(N1)                                                         &kp LA(N1)          &kp LA(N2)                                       &kp LA(N3)                             &kp LA(N4)                 &kp LA(N5)                 &kp LA(N6)
+&trans         &trans                    &trans                       &trans                    &trans                    &trans                                                             &trans              &trans                                           &trans                                 &trans                     &trans                     &trans
 &kp LC(LG(Q))  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
 &kp CAPS       &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                                 &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &sk LEFT_SHIFT
 &toEn          &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &kp LA(SPACE)    &kp LS(LC(V))  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &toRu
@@ -671,11 +671,11 @@
         num_EN {
             display-name = "Num EN";
             bindings = <
-&trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                                              &ru LA(EQUAL)    &ru LS(LA(EQUAL))  &cels_en       &trans      &trans         &trans
-&trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                                      &kp PLUS         &kp N7             &kp N8         &kp N9      &plusminus     &trans
-&trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                                      &kp MINUS        &kp N4             &kp N5         &kp N6      &kp N0         &mult
-&trans  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(S))))    &trans     &kp KP_MULTIPLY  &kp N1             &kp N2         &kp N3      &kp KP_DIVIDE  &kp EQUAL
-                               &trans                 &trans                 &kp LS(LA(LC(LG(S))))  &trans                 &trans                   &kp COMMA  &kp DOT          &kp PRCNT          &ru LA(MINUS)  &mathminus
+&trans  &trans                 &trans                 &trans                 &trans                 &trans                                                         &trans           &trans     &trans         &trans      &trans         &trans
+&trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                                          &kp PLUS         &kp N7     &kp N8         &kp N9      &plusminus     &trans
+&trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                                          &kp MINUS        &kp N4     &kp N5         &kp N6      &kp N0         &mult
+&trans  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(S))))    &kp LA(LG(G))  &kp KP_MULTIPLY  &kp N1     &kp N2         &kp N3      &kp KP_DIVIDE  &kp EQUAL
+                               &trans                 &trans                 &kp LS(LA(LC(LG(S))))  &trans                 &trans                   &kp COMMA      &kp DOT          &kp PRCNT  &ru LA(MINUS)  &mathminus
             >;
 
             label = "Num EN";
@@ -685,20 +685,20 @@
             label = "Num RU";
             display-name = "Num RU";
             bindings = <
-&trans  &trans                 &trans                 &trans                 &trans                 &kp LA(LG(G))                                                 &kp LA(EQUAL)    &kp LS(LA(EQUAL))  &cels_ru       &trans         &trans         &trans
-&trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                                         &kp PLUS         &kp N7             &kp N8         &kp N9         &ru_plusminus  &trans
-&trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                                         &kp MINUS        &kp N4             &kp N5         &kp N6         &kp N0         &ru_mult
-&trans  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(S))))    &trans        &kp KP_MULTIPLY  &kp N1             &kp N2         &kp N3         &kp KP_DIVIDE  &kp EQUAL
-                               &trans                 &trans                 &kp LS(LA(LC(LG(S))))  &trans                 &trans                   &kp RU_COMMA  &kp RU_DOT       &kp RU_PRCNT       &kp LA(MINUS)  &ru_mathminus
+&trans  &trans                 &trans                 &trans                 &trans                 &trans                                                         &trans           &trans        &trans         &trans         &trans         &trans
+&trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                                          &kp PLUS         &kp N7        &kp N8         &kp N9         &ru_plusminus  &trans
+&trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                                          &kp MINUS        &kp N4        &kp N5         &kp N6         &kp N0         &ru_mult
+&trans  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(P))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(S))))    &kp LA(LG(G))  &kp KP_MULTIPLY  &kp N1        &kp N2         &kp N3         &kp KP_DIVIDE  &kp EQUAL
+                               &trans                 &trans                 &kp LS(LA(LC(LG(S))))  &trans                 &trans                   &kp RU_COMMA   &kp RU_DOT       &kp RU_PRCNT  &kp LA(MINUS)  &ru_mathminus
             >;
         };
 
         media_nav {
             bindings = <
 &trans  &trans    &trans               &trans            &trans                       &trans                        &trans        &trans        &trans          &trans     &trans         &trans
-&trans  &trans    &trans               &trans            &trans                       &trans                        &trans        &kp HOME      &kp UP          &kp END    &trans         &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &kp PG_UP     &kp HOME      &kp UP          &kp END    &trans         &trans
 &trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LA(LEFT)  &kp LEFT      &kp DOWN        &kp RIGHT  &kp LA(RIGHT)  &trans
-&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &trans        &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans         &trans
+&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &kp PG_DN     &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans         &trans
                   &trans               &trans            &mo 9                        &mkp MB2  &mkp MB1    &trans  &trans        &trans        &trans          &trans
             >;
 
@@ -713,8 +713,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
-&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LS(LG(N8))     &kp LA(LC(LG(L)))
-                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads        &odd_spreads
+&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
             sensor-bindings = <&enc_vol>, <&enc_vol>;
@@ -725,8 +725,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
-&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LS(LG(N8))     &kp LA(LC(LG(L)))
-                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &no_spreads_ru     &odd_spreads_ru
+&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
             label = "Hot RU";
@@ -777,11 +777,11 @@
         emerg {
             display-name = "Emerg";
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4    &kp F5     &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans    &trans     &trans    &trans     &trans                    &trans  &kp N7  &kp N8  &kp N9   &trans   &studio_unlock
-&trans  &kp LGUI  &kp LCTRL  &kp LALT  &kp LSHFT  &trans                    &trans  &kp N4  &kp N5  &kp N6   &kp N0   &trans
-&trans  &trans    &trans     &trans    &trans     &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3   &trans   &kp ENTER
-                  &trans     &trans    &trans     &trans  &trans    &trans  &trans  &trans  &kp U   &kp B
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp F1  &kp F2  &kp F3  &trans  &kp RU_RUBLE
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F24 F23>, <&inc_dec_kp F24 F23>;
