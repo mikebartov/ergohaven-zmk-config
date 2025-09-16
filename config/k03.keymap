@@ -696,9 +696,9 @@
         media_nav {
             bindings = <
 &trans  &trans    &trans               &trans            &trans                       &trans                        &trans    &trans        &trans          &trans     &trans  &trans
-&trans  &trans    &trans               &trans            &trans                       &trans                        &kp HOME  &kp PG_DN     &kp PG_UP       &kp END    &trans  &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans  &trans
 &trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LEFT  &kp DOWN      &kp UP          &kp RIGHT  &trans  &trans
-&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans  &trans
+&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &kp HOME  &kp PG_DN     &kp PG_UP       &kp END    &trans  &trans
                   &trans               &trans            &mo 9                        &mkp MB2  &mkp MB1    &trans  &trans    &trans        &trans          &trans
             >;
 
@@ -710,11 +710,11 @@
         macro_EN {
             label = "Hot EN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
-&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
-                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &kp K_APPLICATION  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &kp LA(LC(LG(G)))
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1             &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
             sensor-bindings = <&enc_vol>, <&enc_vol>;
@@ -722,11 +722,11 @@
 
         macro_RU {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
-&trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
-                &trans  &trans  &kp F1  &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &kp K_APPLICATION  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &en LA(LC(LG(G)))
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &trans             &kp LA(LC(LG(L)))
+                &trans  &trans  &kp F1             &lt 12 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
             label = "Hot RU";
