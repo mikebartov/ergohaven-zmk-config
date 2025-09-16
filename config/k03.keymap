@@ -695,11 +695,11 @@
 
         media_nav {
             bindings = <
-&trans  &trans    &trans               &trans            &trans                       &trans                        &trans        &trans        &trans          &trans     &trans         &trans
-&trans  &trans    &trans               &trans            &trans                       &trans                        &kp PG_UP     &kp HOME      &kp UP          &kp END    &trans         &trans
-&trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LA(LEFT)  &kp LEFT      &kp DOWN        &kp RIGHT  &kp LA(RIGHT)  &trans
-&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &kp PG_DN     &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans         &trans
-                  &trans               &trans            &mo 9                        &mkp MB2  &mkp MB1    &trans  &trans        &trans        &trans          &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &trans    &trans        &trans          &trans     &trans  &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &kp HOME  &kp PG_DN     &kp PG_UP       &kp END    &trans  &trans
+&trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LEFT  &kp DOWN      &kp UP          &kp RIGHT  &trans  &trans
+&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &trans    &msc SCRL_UP  &msc SCRL_DOWN  &trans     &trans  &trans
+                  &trans               &trans            &mo 9                        &mkp MB2  &mkp MB1    &trans  &trans    &trans        &trans          &trans
             >;
 
             display-name = "Media Nav";
