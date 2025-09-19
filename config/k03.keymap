@@ -508,13 +508,13 @@
 
         UC_layer {
             bindings = <&ml 10 LALT>;
-            key-positions = <53 41>;
+            key-positions = <53 56>;
             layers = <0>;
         };
 
         OSM_Shift {
             bindings = <&sk LSHFT>;
-            key-positions = <28 31>;
+            key-positions = <54 55>;
             layers = <0 1>;
         };
 
@@ -544,7 +544,7 @@
 
         shortcat {
             bindings = <&kp LG(LS(SPACE))>;
-            key-positions = <31 30>;
+            key-positions = <31 32>;
             layers = <0 1>;
         };
 
@@ -625,6 +625,12 @@
             key-positions = <45 46>;
             layers = <6 7>;
         };
+
+        capslock {
+            bindings = <&kp CAPS>;
+            key-positions = <31 28>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
@@ -678,7 +684,7 @@
         };
 
         num_EN {
-            display-name = "Num EN";
+            display-name = "NUM EN";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                                      &trans           &trans     &trans  &trans  &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &kp PLUS         &kp N7     &kp N8  &kp N9  &kp LA(LG(G))  &trans
@@ -692,7 +698,7 @@
 
         num_RU {
             label = "NUM RU";
-            display-name = "Num RU";
+            display-name = "NUM RU";
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                                         &trans           &trans        &trans  &trans  &trans         &trans
 &trans  &trans                 &trans                 &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                          &kp PLUS         &kp N7        &kp N8  &kp N9  &kp LA(LG(G))  &trans
