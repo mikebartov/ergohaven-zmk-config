@@ -640,7 +640,7 @@
             bindings = <
 &trans  &trans       &trans        &trans       &trans         &trans                                  &trans     &trans         &trans       &trans        &trans          &trans
 &trans  &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y      &kp U          &kp I        &kp O         &kp P           &trans
-&trans  &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &lt 10 G                                &lt 10 H   &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &trans
+&trans  &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &lt 11 G                                &lt 11 H   &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &trans
 &trans  &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &trans         &trans      &kp N      &kp M          &none        &none         &none           &trans
                      &trans        &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE    &lt 8 BSPC  &lt 6 ESC  &lt 9 DEL      &trans       &trans
             >;
@@ -651,11 +651,11 @@
         base_RU {
             display-name = "RU";
             bindings = <
-&trans  &trans                    &trans                       &trans                    &trans                    &trans                                                        &trans              &trans                                           &trans                                 &trans                     &trans                     &trans
-&trans  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
-&trans  &hrm LCMD RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                            &kp RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &trans
-&trans  &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &trans         &trans      &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &trans
-                                  &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC           &lt 9 DEL                                        &trans                                 &trans
+&trans  &trans                    &trans                       &trans                    &trans                    &trans                                                        &trans                 &trans                                           &trans                                 &trans                     &trans                     &trans
+&trans  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN     &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
+&trans  &lt 11 RU_CYRILLIC_ER     &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 11 RU_CYRILLIC_PE                                         &lt 11 RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &trans
+&trans  &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &trans         &trans      &kp RU_CYRILLIC_TE     &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &trans
+                                  &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC              &lt 9 DEL                                        &trans                                 &trans
             >;
         };
 
@@ -711,21 +711,21 @@
         macro_EN {
             label = "HOT EN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans  &trans             &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
-&trans  &trans  &trans  &trans  &kp K_APPLICATION  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &trans
-&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans           &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LA(LC(LG(G)))  &trans
-                &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                     &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                     &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &kp K_APPLICATION  &delete_worddoc                            &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &trans
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LA(LC(LG(G)))  &trans
+                &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))   &trans             &trans
             >;
         };
 
         macro_RU {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans                                              &trans             &trans          &trans             &trans              &trans             &trans
-&trans  &trans  &trans  &trans  &trans             &trans                                              &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
-&trans  &trans  &trans  &trans  &kp K_APPLICATION  &trans                                              &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &trans
-&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans           &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LA(LC(LG(G)))  &trans
-                &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &delete_worddoc  &trans             &kp LC(LG(C))   &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                     &trans             &trans          &trans             &trans              &trans             &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                     &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
+&trans  &trans  &trans  &trans  &kp K_APPLICATION  &delete_worddoc                            &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &trans
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LA(LC(LG(G)))  &trans
+                &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
             label = "HOT RU";
