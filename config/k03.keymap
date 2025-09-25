@@ -68,17 +68,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        skCMD_NUM: skCMD_NUM {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SKCMD_NUM";
-            bindings = <&skCMD_Num>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            require-prior-idle-ms = <30>;
-        };
     };
 
     macros {
