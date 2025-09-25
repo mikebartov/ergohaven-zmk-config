@@ -85,14 +85,14 @@
         toEn: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13 &to 0>;
+            bindings = <&to 0 &kp F13>;
             label = "TO_EN";
         };
 
         toRu: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F14 &to 1>;
+            bindings = <&to 1 &kp F14>;
             label = "TO_RU";
         };
 
@@ -495,11 +495,38 @@
             wait-ms = <0>;
         };
 
-        skCMD_Num: skCMD_Num {
+        zotero_two_pages: zotero_two_pages {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 4 &sk LEFT_COMMAND>;
-            label = "SKCMD_NUM";
+            bindings =
+                <&kp LS(LA(LC(LG(X))))>,
+                <&macro_wait_time 10>,
+                <&kp V &kp ENTER &kp O &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&kp LS(LA(LC(LG(X))))>,
+                <&macro_wait_time 10>,
+                <&kp V &kp ENTER &kp S &kp UP &kp ENTER>;
+
+            label = "ZOTERO_TWO_PAGES";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        zotero_one_page: zotero_one_page {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(X))))>,
+                <&macro_wait_time 10>,
+                <&kp V &kp ENTER &kp N &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&kp LS(LA(LC(LG(X))))>,
+                <&macro_wait_time 10>,
+                <&kp V &kp ENTER &kp A &kp ENTER>;
+
+            label = "ZOTERO_ONE_PAGE";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -661,6 +688,18 @@
             key-positions = <13 25>;
             layers = <0 1>;
         };
+
+        zotero_one_page {
+            bindings = <&zotero_one_page>;
+            key-positions = <16 28>;
+            layers = <6 7>;
+        };
+
+        zotero_two_pages {
+            bindings = <&zotero_two_pages>;
+            key-positions = <15 27>;
+            layers = <6 7>;
+        };
     };
 
     keymap {
@@ -668,11 +707,11 @@
 
         base_EN {
             bindings = <
-&trans  &trans       &trans        &trans       &trans         &trans                                  &trans     &trans         &trans       &trans        &trans          &trans
-&trans  &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y      &kp U          &kp I        &kp O         &kp P           &trans
-&trans  &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &lt 11 G                                &lt 11 H   &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &trans
-&trans  &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &trans         &trans      &kp N      &kp M          &none        &none         &none           &trans
-                     &trans        &trans       &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE    &lt 8 BSPC  &lt 6 ESC  &lt 9 DEL      &trans       &trans
+&none  &none        &none         &none        &none          &none                                   &none      &none          &none        &none         &none           &none
+&none  &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y      &kp U          &kp I        &kp O         &kp P           &none
+&none  &hrm LCMD A  &hrm LCTRL S  &hrm LALT D  &hrm LSHIFT F  &lt 11 G                                &lt 11 H   &hrm RSHIFT J  &hrm RALT K  &hrm RCTRL L  &hrm RCMD SEMI  &none
+&none  &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B        &none          &none       &kp N      &kp M          &none        &none         &none           &none
+                    &none         &none        &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE    &lt 8 BSPC  &lt 6 ESC  &lt 9 DEL      &none        &none
             >;
 
             display-name = "EN";
@@ -681,11 +720,11 @@
         base_RU {
             display-name = "RU";
             bindings = <
-&trans  &trans                    &trans                       &trans                    &trans                    &trans                                                        &trans                 &trans                                           &trans                                 &trans                     &trans                     &trans
-&trans  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN     &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &trans
-&trans  &hrm LGUI RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 11 RU_CYRILLIC_PE                                         &lt 11 RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &trans
-&trans  &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &trans         &trans      &kp RU_CYRILLIC_TE     &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &trans
-                                  &trans                       &trans                    &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC              &lt 9 DEL                                        &trans                                 &trans
+&none  &none                     &none                        &none                     &none                     &none                                                         &none                  &none                                            &none                                  &none                      &none                      &none
+&none  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA        &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN     &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA         &none
+&none  &hrm LGUI RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LSHFT RU_CYRILLIC_A  &lt 11 RU_CYRILLIC_PE                                         &lt 11 RU_CYRILLIC_ER  &hrm RSHFT RU_CYRILLIC_O                         &hrm RALT RU_CYRILLIC_EL               &hrm RCTRL RU_CYRILLIC_DE  &hrm RCMD RU_CYRILLIC_ZHE  &none
+&none  &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                  &none          &none       &kp RU_CYRILLIC_TE     &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E          &none
+                                 &none                        &none                     &lt 9 TAB                 &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC              &lt 9 DEL                                        &none                                  &none
             >;
         };
 
@@ -802,11 +841,11 @@
         extra {
             display-name = "EXT";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mathminus                    &kp F24  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &plusminus                    &kp F23  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mult       &trans    &trans  &trans   &kp F1  &kp F2  &kp F3  &trans  &trans
-                &trans  &trans  &trans  &trans      &trans    &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans          &trans        &trans                        &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &ru LA(LS(N4))  &kp RU_RUBLE  &mathminus                    &kp F24  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &trans  &trans          &trans        &plusminus                    &kp F23  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans  &trans          &trans        &mult       &trans    &trans  &trans   &kp F1  &kp F2  &kp F3  &trans  &trans
+                &trans  &trans          &trans        &trans      &trans    &trans  &trans   &trans  &trans  &trans
             >;
         };
     };
