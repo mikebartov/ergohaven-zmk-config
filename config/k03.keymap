@@ -631,6 +631,36 @@
             key-positions = <31 28>;
             layers = <0 1>;
         };
+
+        page_up {
+            bindings = <&kp PG_UP>;
+            key-positions = <20 32>;
+            layers = <8>;
+        };
+
+        page_down {
+            bindings = <&kp PG_DN>;
+            key-positions = <32 46>;
+            layers = <8>;
+        };
+
+        ALT_4 {
+            bindings = <&kp LA(N4)>;
+            key-positions = <21 33>;
+            layers = <0 1>;
+        };
+
+        ALT_5 {
+            bindings = <&kp LA(N5)>;
+            key-positions = <22 34>;
+            layers = <0 1>;
+        };
+
+        CMD_5 {
+            bindings = <&kp LG(N5)>;
+            key-positions = <13 25>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
@@ -714,7 +744,7 @@
 &trans  &trans  &trans  &trans  &trans             &trans                                     &trans             &trans          &trans             &trans              &trans             &trans
 &trans  &trans  &trans  &trans  &trans             &trans                                     &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
 &trans  &trans  &trans  &trans  &kp K_APPLICATION  &delete_worddoc                            &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))  &trans
-&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &kp LA(LC(A))   &fit_width         &fit_height         &kp LA(LC(LG(G)))  &trans
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &kp LA(LC(A))   &no_spreads        &odd_spreads        &kp LA(LC(LG(G)))  &trans
                 &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))   &trans             &trans
             >;
         };
@@ -724,7 +754,7 @@
 &trans  &trans  &trans  &trans  &trans             &trans                                     &trans             &trans          &trans             &trans              &trans             &trans
 &trans  &trans  &trans  &trans  &trans             &trans                                     &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)          &trans
 &trans  &trans  &trans  &trans  &kp K_APPLICATION  &delete_worddoc                            &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))  &trans
-&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &en LA(LC(A))   &fit_width         &fit_height         &en LA(LC(LG(G)))  &trans
+&trans  &trans  &trans  &trans  &trans             &trans            &trans           &trans  &trans             &en LA(LC(A))   &no_spreads_ru     &no_spreads_ru      &en LA(LC(LG(G)))  &trans
                 &trans  &trans  &kp F1             &lt 11 LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))   &trans             &trans
             >;
 
@@ -733,11 +763,11 @@
 
         nav {
             bindings = <
-&trans  &trans    &trans               &trans            &trans                       &trans                        &trans    &trans          &trans        &trans     &trans  &trans
-&trans  &trans    &trans               &trans            &trans                       &trans                        &trans    &msc SCRL_DOWN  &msc SCRL_UP  &trans     &trans  &trans
-&trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LEFT  &kp DOWN        &kp UP        &kp RIGHT  &trans  &trans
-&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &kp HOME  &kp PG_DN       &kp PG_UP     &kp END    &trans  &trans
-                  &trans               &trans            &trans                       &mkp MB2  &mkp MB1    &trans  &trans    &trans          &trans        &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &trans        &trans          &trans        &trans     &trans         &trans
+&trans  &trans    &trans               &trans            &trans                       &trans                        &trans        &trans          &kp UP        &trans     &trans         &trans
+&trans  &kp RCMD  &hrm LCTRL C_VOL_DN  &hrm LALT C_MUTE  &hrm LEFT_SHIFT C_VOLUME_UP  &trans                        &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT  &kp LA(RIGHT)  &trans
+&trans  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT             &trans    &trans      &trans  &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans     &kp END        &trans
+                  &trans               &trans            &trans                       &mkp MB2  &mkp MB1    &trans  &trans        &trans          &trans        &trans
             >;
 
             display-name = "NAV";
