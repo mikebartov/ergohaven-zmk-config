@@ -53,6 +53,118 @@
             key-positions = <26 27>;
             layers = <0>;
         };
+
+        OSM_Shift {
+            bindings = <&sk LSHIFT>;
+            key-positions = <32 33>;
+        };
+
+        CMD_1 {
+            bindings = <&kp LG(N1)>;
+            key-positions = <14 4>;
+            layers = <0 1>;
+        };
+
+        CMD_2 {
+            bindings = <&kp LG(N2)>;
+            key-positions = <3 13>;
+            layers = <0 1>;
+        };
+
+        CMD_3 {
+            bindings = <&kp LG(N3)>;
+            key-positions = <12 2>;
+            layers = <0 1>;
+        };
+
+        CMD_4 {
+            bindings = <&kp LG(N4)>;
+            key-positions = <11 1>;
+            layers = <0 1>;
+        };
+
+        CMD_5 {
+            bindings = <&kp LG(N5)>;
+            key-positions = <0 10>;
+            layers = <0 1>;
+        };
+
+        ALT_1 {
+            bindings = <&kp LA(N1)>;
+            key-positions = <5 15>;
+            layers = <0 1>;
+        };
+
+        ALT_2 {
+            bindings = <&kp LA(N2)>;
+            key-positions = <6 16>;
+            layers = <0 1>;
+        };
+
+        ALT_3 {
+            bindings = <&kp LA(N3)>;
+            key-positions = <17 7>;
+            layers = <0 1>;
+        };
+
+        ALT_4 {
+            bindings = <&kp LA(N4)>;
+            key-positions = <8 18>;
+            layers = <0 1>;
+        };
+
+        ALT_5 {
+            bindings = <&kp LA(N5)>;
+            key-positions = <9 19>;
+            layers = <0 1>;
+        };
+
+        word_review_lang {
+            bindings = <&kp LA(LC(LG(L)))>;
+            key-positions = <26 27>;
+            layers = <6 7>;
+        };
+
+        page_up {
+            bindings = <&kp PG_UP>;
+            key-positions = <7 17>;
+            layers = <8>;
+        };
+
+        page_down {
+            bindings = <&kp PG_DN>;
+            key-positions = <17 27>;
+            layers = <8>;
+        };
+
+        shortcat {
+            bindings = <&kp LS(LG(SPACE))>;
+            key-positions = <16 17>;
+            layers = <0 1>;
+        };
+
+        command_palette {
+            bindings = <&kp LS(LG(P))>;
+            key-positions = <13 14>;
+        };
+
+        word_frmt_marks {
+            bindings = <&kp LG(N8)>;
+            key-positions = <16 26>;
+            layers = <1 0>;
+        };
+
+        word_nbhyphen {
+            bindings = <&kp LC(LG(MINUS))>;
+            key-positions = <16 26>;
+            layers = <2 3>;
+        };
+
+        word_opt_hyphen {
+            bindings = <&kp LA(LC(MINUS))>;
+            key-positions = <26 27>;
+            layers = <2 3>;
+        };
     };
 
     macros {
@@ -127,6 +239,20 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        comma_space_ru: comma_space_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_COMMA &kp RU_SPACE>;
+            label = "COMMA_SPACE_RU";
+        };
+
+        comma_space_en: comma_space_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMA_SPACE_EN";
+        };
     };
 
     keymap {
@@ -156,10 +282,10 @@
 
         sym_en {
             bindings = <
-  &kp AT            &kp SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                            &kp CARET  &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
-  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR        &kp RPAR          &kp SEMI                             &kp COLON  &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
-  &kp LT            &kp GT             &ru LA(SEMI)    &ru LS(LA(SEMI))  &kp DOUBLE_QUOTES                    &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
-                                                       &ru LS(LA(N8))    &ru LA(H)          &trans    &trans  &kp DOT    &kp PRCNT
+  &kp AT            &kp SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                                     &kp CARET  &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
+  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR        &kp RPAR          &kp SEMI                                      &kp COLON  &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
+  &kp LT            &kp GT             &ru LA(SEMI)    &ru LS(LA(SEMI))  &kp DOUBLE_QUOTES                             &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
+                                                       &ru LS(LA(N8))    &ru LA(H)          &trans    &comma_space_en  &kp DOT    &kp PRCNT
             >;
 
             display-name = "SYM";
@@ -168,10 +294,10 @@
         sym_ru {
             display-name = "SYM";
             bindings = <
-  &en AT            &en SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                            &en CARET     &en HASH      &en DOLLAR    &en AMPS          &en PIPE
-  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RU_LPAR     &kp RU_RPAR       &kp RU_SEMI                          &kp RU_COLON  &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
-  &en LT            &en GT             &kp LA(SEMI)    &kp LS(LA(SEMI))  &kp DOUBLE_QUOTES                    &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
-                                                       &kp LS(LA(N8))    &kp LA(H)          &trans    &trans  &kp DOT       &kp PRCNT
+  &en AT            &en SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                                     &en CARET     &en HASH      &en DOLLAR    &en AMPS          &en PIPE
+  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RU_LPAR     &kp RU_RPAR       &kp RU_SEMI                                   &kp RU_COLON  &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
+  &en LT            &en GT             &kp LA(SEMI)    &kp LS(LA(SEMI))  &kp DOUBLE_QUOTES                             &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
+                                                       &kp LS(LA(N8))    &kp LA(H)          &trans    &comma_space_ru  &kp DOT       &kp PRCNT
             >;
         };
 
