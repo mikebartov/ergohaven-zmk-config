@@ -59,6 +59,18 @@
             key-positions = <32 33>;
         };
 
+        page_up {
+            bindings = <&kp PG_UP>;
+            key-positions = <7 17>;
+            layers = <8>;
+        };
+
+        page_down {
+            bindings = <&kp PG_DN>;
+            key-positions = <17 27>;
+            layers = <8>;
+        };
+        
         CMD_1 {
             bindings = <&kp LG(N1)>;
             key-positions = <14 4>;
@@ -119,24 +131,6 @@
             layers = <0 1>;
         };
 
-        word_review_lang {
-            bindings = <&kp LA(LC(LG(L)))>;
-            key-positions = <26 27>;
-            layers = <6 7>;
-        };
-
-        page_up {
-            bindings = <&kp PG_UP>;
-            key-positions = <7 17>;
-            layers = <8>;
-        };
-
-        page_down {
-            bindings = <&kp PG_DN>;
-            key-positions = <17 27>;
-            layers = <8>;
-        };
-
         shortcat {
             bindings = <&kp LS(LG(SPACE))>;
             key-positions = <16 17>;
@@ -146,6 +140,12 @@
         command_palette {
             bindings = <&kp LS(LG(P))>;
             key-positions = <13 14>;
+        };
+
+        word_review_lang {
+            bindings = <&kp LA(LC(LG(L)))>;
+            key-positions = <26 27>;
+            layers = <6 7>;
         };
 
         word_frmt_marks {
@@ -240,11 +240,17 @@
             tap-ms = <30>;
         };
 
-        comma_space_ru: comma_space_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_COMMA &kp RU_SPACE>;
-            label = "COMMA_SPACE_RU";
+        ml: ml {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "ML";
         };
 
         comma_space_en: comma_space_en {
@@ -253,6 +259,196 @@
             bindings = <&kp COMMA &kp SPACE>;
             label = "COMMA_SPACE_EN";
         };
+
+        comma_space_ru: comma_space_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_COMMA &kp RU_SPACE>;
+            label = "COMMA_SPACE_RU";
+        };
+
+        nbsp_emdash_en: nbsp_emdash_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru LA(SPACE) &ru LS(LA(MINUS))>;
+            label = "NBSP_EMDASH_EN";
+        };
+
+        nbsp_emdash_ru: nbsp_emdash_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SPACE) &kp LS(LA(MINUS))>;
+            label = "NBSP_EMDASH_RU";
+        };
+
+        par_input: par_input {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PAR_INPUT";
+        };
+
+        alpha: alpha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp N1>;
+            label = "ALPHA";
+        };
+
+        beta: beta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp N2>;
+            label = "BETA";
+        };
+
+        gamma: gamma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp N3>;
+            label = "GAMMA";
+        };
+
+        delta: delta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp N4>;
+            label = "DELTA";
+        };
+
+        sigma: sigma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp C &kp N3>;
+            label = "SIGMA";
+        };
+
+        mu: mu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp C>;
+            label = "MU";
+        };
+
+        lambda: lambda {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp B &kp B>;
+            label = "LAMBDA";
+        };
+
+        chi: chi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N3 &kp C &kp N7>;
+            label = "CHI";
+        };
+
+        sup_0: sup_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N0>;
+            label = "SUP_0";
+        };
+
+        sup_1: sup_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N0 &kp B &kp N9>;
+            label = "SUP_1";
+        };
+
+        sup_2: sup_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N0 &kp B &kp N2>;
+            label = "SUP_2";
+        };
+
+        sup_3: sup_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N0 &kp N0 &kp B &kp N3>;
+            label = "SUP_3";
+        };
+
+        sup_4: sup_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N4>;
+            label = "SUP_4";
+        };
+
+        sup_5: sup_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N5>;
+            label = "SUP_5";
+        };
+
+        sup_6: sup_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N6>;
+            label = "SUP_6";
+        };
+
+        sup_7: sup_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N7>;
+            label = "SUP_7";
+        };
+
+        sup_8: sup_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N8>;
+            label = "SUP_8";
+        };
+
+        sup_9: sup_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp N9>;
+            label = "SUP_9";
+        };
+
+        sup_minus: sup_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp A>;
+            label = "SUP_MINUS";
+        };
+
+        sup_plus: sup_plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp B>;
+            label = "SUP_PLUS";
+        };
+
+        sup_lpar: sup_lpar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp D>;
+            label = "SUP_LPAR";
+        };
+
+        sup_rpar: sup_rpar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N7 &kp E>;
+            label = "SUP_RPAR";
+        };
+
+        sub_50: sub_50 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N2 &kp N0 &kp N8 &kp N5 &kp U &kp N2 &kp N0 &kp N8 &kp N0>;
+            label = "SUB_50";
+        };
+
     };
 
     keymap {
