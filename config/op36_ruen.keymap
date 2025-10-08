@@ -193,6 +193,18 @@
             key-positions = <13 16>;
             layers = <0 1>;
         };
+
+        layer_UCS {
+            bindings = <&ml 11 LALT>;
+            key-positions = <31 34>;
+            layers = <0>;
+        };
+
+        par_input {
+            bindings = <&par_input>;
+            key-positions = <12 13>;
+            layers = <2 3>;
+        };
     };
 
     macros {
@@ -572,7 +584,7 @@
             bindings = <
   &trans    &trans               &trans            &trans                &trans                        &trans        &trans          &kp UP        &trans     &trans
   &kp LCMD  &hml LCTRL C_VOL_DN  &hml LALT K_MUTE  &hml LSHIFT C_VOL_UP  &trans                        &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT  &kp LA(RIGHT)
-  &trans    &mt LG(X) K_PREV     &mt LG(C) K_PP    &mt LG(V) K_NEXT      &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans     &kp END
+  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT      &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans     &kp END
                                                    &trans                &mkp MB2  &mkp MB1    &trans  &trans        &trans
             >;
 
@@ -592,13 +604,24 @@
 
         extra {
             bindings = <
-  &trans  &trans  &kp LA(LS(N4))  &kp RU_RUBLE  &trans                    &kp F23  &kp F7  &kp F8  &kp F9  &trans
-  &trans  &trans  &trans          &trans        &trans                    &kp F24  &kp F4  &kp F5  &kp F6  &trans
-  &trans  &trans  &trans          &trans        &trans                    &trans   &kp F1  &kp F2  &kp F3  &trans
-                                  &trans        &trans  &trans    &trans  &trans   &trans
+  &trans  &trans  &ru LA(LS(N4))  &kp RU_RUBLE  &trans                           &kp F23  &kp F7  &kp F8  &kp F9  &trans
+  &trans  &trans  &trans          &trans        &en LS(GRAVE)                    &kp F24  &kp F4  &kp F5  &kp F6  &trans
+  &trans  &trans  &trans          &trans        &trans                           &trans   &kp F1  &kp F2  &kp F3  &trans
+                                  &trans        &trans         &trans    &trans  &trans   &trans
             >;
 
             display-name = "EXT";
+        };
+
+        unicode {
+            bindings = <
+  &trans   &trans  &trans  &trans  &trans                    &sup_minus  &sup_7  &sup_8  &sup_9  &trans
+  &delta   &gamma  &beta   &alpha  &trans                    &sup_plus   &sup_4  &sup_5  &sup_6  &sup_0
+  &lambda  &chi    &mu     &sigma  &trans                    &sup_rpar   &sup_1  &sup_2  &sup_3  &sub_50
+                           &trans  &trans  &trans    &trans  &trans      &trans
+            >;
+
+            label = "UCS";
         };
     };
 };
