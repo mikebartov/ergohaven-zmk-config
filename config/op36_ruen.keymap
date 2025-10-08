@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <30>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -29,7 +29,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <30>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -204,6 +204,18 @@
             bindings = <&par_input>;
             key-positions = <12 13>;
             layers = <2 3>;
+        };
+
+        nbsp_ru {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <13 23>;
+            layers = <1 3 5>;
+        };
+
+        nbsp_en {
+            bindings = <&ru LA(SPACE)>;
+            key-positions = <13 23>;
+            layers = <0 2 4>;
         };
     };
 
