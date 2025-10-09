@@ -577,7 +577,7 @@
             bindings = <
   &trans  &trans  &trans  &trans     &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
   &trans  &trans  &trans  &kp K_APP  &trans                                  &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
-  &trans  &trans  &trans  &trans     &trans                                  &trans             &kp LA(LC(A))   &trans             &trans              &kp LA(LC(LG(G)))
+  &trans  &trans  &trans  &trans     &trans                                  &trans             &kp LA(LC(A))   &kp LA(LC(R))      &trans              &kp LA(LC(LG(G)))
                           &kp F1     &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
             >;
 
@@ -588,7 +588,7 @@
             bindings = <
   &trans  &trans  &trans  &trans     &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
   &trans  &trans  &trans  &kp K_APP  &trans                                  &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))
-  &trans  &trans  &trans  &trans     &trans                                  &trans             &en LA(LC(A))   &trans             &trans              &en LA(LC(LG(G)))
+  &trans  &trans  &trans  &trans     &trans                                  &trans             &en LA(LC(A))   &en LA(LC(R))      &trans              &en LA(LC(LG(G)))
                           &kp F1     &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
             >;
 
