@@ -232,9 +232,9 @@
         };
 
         caps_ru {
-            bindings = <&to 12>;
+            bindings = <&kp CAPS>;
             key-positions = <16 15>;
-            layers = <1 12>;
+            layers = <1>;
         };
     };
 
