@@ -62,6 +62,16 @@
             quick-tap-ms = <50>;
             flavor = "tap-preferred";
         };
+
+        lt_capsword_off: lt_capsword_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_CAPSWORD_OFF";
+            bindings = <&lt>, <&caps_word_ru_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -191,10 +201,10 @@
             layers = <2 3>;
         };
 
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <13 16>;
-            layers = <0 1>;
+        caps_en {
+            bindings = <&caps_word>;
+            key-positions = <16 15>;
+            layers = <0>;
         };
 
         layer_UCS {
@@ -219,6 +229,12 @@
             bindings = <&ru LA(SPACE)>;
             key-positions = <13 23>;
             layers = <0 2 4>;
+        };
+
+        caps_ru {
+            bindings = <&to 12>;
+            key-positions = <16 15>;
+            layers = <1 12>;
         };
     };
 
@@ -503,6 +519,13 @@
             bindings = <&kp U &kp N2 &kp N0 &kp N8 &kp N5 &kp U &kp N2 &kp N0 &kp N8 &kp N0>;
             label = "SUB_50";
         };
+
+        caps_word_ru_off: caps_word_ru_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "CAPS_WORD_RU_OFF";
+        };
     };
 
     keymap {
@@ -637,6 +660,16 @@
             >;
 
             label = "UCS";
+        };
+
+        ru_caps {
+            display-name = "RU";
+            bindings = <
+  &kp LS(RU_CYRILLIC_SHORT_I)   &kp LS(RU_CYRILLIC_TSE)          &kp LS(RU_CYRILLIC_U)         &kp LS(RU_CYRILLIC_KA)         &mt LS(RU_CYRILLIC_IO) LS(RU_CYRILLIC_IE)                                          &kp LS(RU_CYRILLIC_EN)     &kp LS(RU_CYRILLIC_GHE)                                  &mt LS(RU_CYRILLIC_SHCHA) LS(RU_CYRILLIC_SHA)  &kp LS(RU_CYRILLIC_ZE)         &kp LS(RU_CYRILLIC_HA)
+  &hml LGUI LS(RU_CYRILLIC_EF)  &hml LCTRL LS(RU_CYRILLIC_YERU)  &hml LALT LS(RU_CYRILLIC_VE)  &hml LSHIFT LS(RU_CYRILLIC_A)  &lt 10 LS(RU_CYRILLIC_PE)                                                          &lt 10 LS(RU_CYRILLIC_ER)  &hmr RSHIFT LS(RU_CYRILLIC_O)                            &hmr RALT LS(RU_CYRILLIC_EL)                   &hmr RCTRL LS(RU_CYRILLIC_DE)  &hmr RGUI LS(RU_CYRILLIC_ZHE)
+  &mt LG(Z) LS(RU_CYRILLIC_YA)  &mt LG(X) LS(RU_CYRILLIC_CHE)    &mt LG(C) LS(RU_CYRILLIC_ES)  &mt LG(V) LS(RU_CYRILLIC_EM)   &kp LS(RU_CYRILLIC_I)                                                              &kp LS(RU_CYRILLIC_TE)     &mt LS(RU_CYRILLIC_HARD_SIGN) LS(RU_CYRILLIC_SOFT_SIGN)  &kp LS(RU_CYRILLIC_BE)                         &kp LS(RU_CYRILLIC_YU)         &kp LS(RU_CYRILLIC_E)
+                                                                                               &lt 9 TAB                      &lt 5 ENTER                                &lt_capsword_off 3 SPACE    &lt 8 BSPC  &lt 7 ESC                  &lt 9 DEL
+            >;
         };
     };
 };
