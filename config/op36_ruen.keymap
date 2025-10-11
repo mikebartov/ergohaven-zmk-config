@@ -66,7 +66,7 @@
         lt_capsword_off: lt_capsword_off {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_CAPSWORD_OFF";
-            bindings = <&lt>, <&caps_word_ru_off>;
+            bindings = <&lt>, <&capsword_off>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -520,10 +520,10 @@
             label = "SUB_50";
         };
 
-        caps_word_ru_off: caps_word_ru_off {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        capsword_off: caps_word_ru_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &kp SPACE>;
             label = "CAPS_WORD_RU_OFF";
         };
     };
