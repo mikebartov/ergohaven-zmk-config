@@ -236,6 +236,18 @@
             key-positions = <16 15>;
             layers = <1>;
         };
+
+        cyr_io {
+            bindings = <&kp RU_CYRILLIC_IO>;
+            key-positions = <3 4>;
+            layers = <1>;
+        };
+
+        cyr_shcha {
+            bindings = <&kp RU_CYRILLIC_SHCHA>;
+            key-positions = <7 8>;
+            layers = <1>;
+        };
     };
 
     macros {
