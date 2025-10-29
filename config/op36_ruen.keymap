@@ -542,8 +542,10 @@
         work_vpn: work_vpn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(R)) &kp DOWN &kp ENTER>;
+            bindings = <&kp LC(LA(R)) &kp DOWN &kp ENTER>;
             label = "WORK_VPN";
+            tap-ms = <50>;
+            wait-ms = <0>;
         };
     };
 
@@ -639,10 +641,10 @@
 
         nav {
             bindings = <
-  &trans    &trans               &trans            &trans                &trans                        &trans        &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
-  &kp RCMD  &hml LCTRL C_VOL_DN  &hml LALT K_MUTE  &hml LSHIFT C_VOL_UP  &trans                        &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
-  &trans    &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT      &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
-                                                   &trans                &mkp MB2  &mkp MB1    &trans  &trans        &trans
+  &trans     &trans               &trans            &trans                &trans                        &trans        &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
+  &kp LCTRL  &hml LCTRL C_VOL_DN  &hml LALT K_MUTE  &hml LSHIFT C_VOL_UP  &trans                        &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
+  &trans     &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT      &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
+                                                    &trans                &mkp MB2  &mkp MB1    &trans  &trans        &trans
             >;
 
             display-name = "NAV";
