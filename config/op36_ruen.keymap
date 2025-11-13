@@ -72,6 +72,15 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        bspc_del: bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_DEL";
+            bindings = <&lt 8 BSPC>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -89,9 +98,10 @@
             layers = <0 1>;
         };
 
-        OSM_Shift {
-            bindings = <&sk LSHIFT>;
-            key-positions = <13 16>;
+        Shift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <32 33>;
+            layers = <0 1>;
         };
 
         page_up {
@@ -289,6 +299,12 @@
             bindings = <&kp LS(NON_US_BSLH)>;
             key-positions = <5 15>;
             layers = <4>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <20 10>;
+            layers = <0 1>;
         };
     };
 
@@ -600,8 +616,8 @@
             bindings = <
   &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y      &kp U          &kp I        &kp O         &kp P
   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHIFT F  &lt 10 G                                &lt 10 H   &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMICOLON
-  &mt LG(Z) Z  &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B                                   &kp N      &kp M          &none        &none         &none
-                                          &lt 9 TAB      &lt 4 ENTER  &lt 2 SPACE    &lt 8 BSPC  &lt 6 ESC  &lt 9 DELETE
+  &lt 9 Z      &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B                                   &kp N      &kp M          &none        &none         &none
+                                          &none          &lt 4 ENTER  &lt 2 SPACE    &lt 8 BSPC  &lt 6 ESC  &none
             >;
 
             display-name = "EN";
@@ -611,8 +627,8 @@
             bindings = <
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA         &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN     &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
   &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                         &lt 10 RU_CYRILLIC_ER  &hmr RSHIFT RU_CYRILLIC_O                        &hmr RALT RU_CYRILLIC_EL               &hmr RCTRL RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
-  &mt LG(Z) RU_CYRILLIC_YA  &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                             &kp RU_CYRILLIC_TE     &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E
-                                                                                   &lt 9 TAB                  &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC              &lt 9 DEL
+  &lt 9 RU_CYRILLIC_YA      &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                             &kp RU_CYRILLIC_TE     &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E
+                                                                                   &none                      &lt 5 ENTER                        &lt 3 SPACE    &lt 8 BSPC  &lt 7 ESC              &none
             >;
 
             display-name = "RU";
@@ -685,10 +701,10 @@
 
         nav {
             bindings = <
-  &trans     &trans               &trans            &trans                &trans                        &trans        &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
-  &kp LCTRL  &hml LCTRL C_VOL_DN  &hml LALT K_MUTE  &hml LSHIFT C_VOL_UP  &trans                        &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
-  &trans     &mt LG(X) C_PREV     &mt LG(C) C_PP    &mt LG(V) C_NEXT      &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
-                                                    &trans                &mkp MB2  &mkp MB1    &trans  &trans        &trans
+  &trans    &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &kp BSPC                      &kp DEL       &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
+  &kp LCMD  &kp LCTRL         &kp LALT        &kp LSHIFT        &kp TAB                       &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
+  &trans    &mt LG(X) C_PREV  &mt LG(C) C_PP  &mt LG(V) C_NEXT  &trans                        &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
+                                              &trans            &mkp MB2  &mkp MB1    &trans  &trans        &trans
             >;
 
             display-name = "NAV";
