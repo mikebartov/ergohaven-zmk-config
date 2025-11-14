@@ -211,8 +211,8 @@
             layers = <2 3>;
         };
 
-        caps_en {
-            bindings = <&caps_word>;
+        tab {
+            bindings = <&kp TAB>;
             key-positions = <16 15>;
             layers = <0>;
         };
@@ -239,12 +239,6 @@
             bindings = <&ru LA(SPACE)>;
             key-positions = <13 23>;
             layers = <0 2 4>;
-        };
-
-        caps_ru {
-            bindings = <&kp CAPS>;
-            key-positions = <16 15>;
-            layers = <1>;
         };
 
         cyr_io {
@@ -305,6 +299,12 @@
             bindings = <&kp LG(Z)>;
             key-positions = <20 10>;
             layers = <0 1>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <16 15>;
+            layers = <0 2>;
         };
     };
 
@@ -679,10 +679,10 @@
 
         macro_en {
             bindings = <
-  &trans  &trans  &trans     &trans     &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
-  &trans  &trans  &work_vpn  &kp K_APP  &trans                                  &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
-  &trans  &trans  &trans     &trans     &trans                                  &trans             &kp LA(LC(A))   &kp LA(LC(R))      &trans              &kp LA(LC(LG(G)))
-                             &kp F1     &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
+  &trans  &trans  &trans         &trans         &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
+  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                               &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
+  &trans  &trans  &trans         &trans         &trans                                  &trans             &kp LA(LC(A))   &kp LA(LC(R))      &trans              &kp LA(LC(LG(G)))
+                                 &kp F1         &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
             >;
 
             label = "HOT";
@@ -690,10 +690,10 @@
 
         macro_ru {
             bindings = <
-  &trans  &trans  &trans     &trans     &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
-  &trans  &trans  &work_vpn  &kp K_APP  &trans                                  &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))
-  &trans  &trans  &trans     &trans     &trans                                  &trans             &en LA(LC(A))   &en LA(LC(R))      &trans              &en LA(LC(LG(G)))
-                             &kp F1     &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
+  &trans  &trans  &trans         &trans         &trans                                  &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
+  &trans  &trans  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                               &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))
+  &trans  &trans  &trans         &trans         &trans                                  &trans             &en LA(LC(A))   &en LA(LC(R))      &trans              &en LA(LC(LG(G)))
+                                 &kp F1         &kp LG(ENTER)  &kp LA(MINUS)    &trans  &trans             &kp LC(LG(C))
             >;
 
             label = "HOT";
@@ -712,10 +712,10 @@
 
         wind_man {
             bindings = <
-  &trans                &trans                         &trans           &trans         &trans                    &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
-  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)          &kp LS(LC(TAB))  &kp LC(TAB)    &trans                    &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
-  &trans                &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LS(LG(C))    &kp LA(LG(C))  &trans                    &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
-                                                                        &trans         &trans  &trans    &trans  &trans         &trans
+  &trans  &trans                         &trans                &trans                 &trans                           &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
+  &trans  &kp LA(LG(C))                  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LA(LG(C))                    &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
+  &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                           &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
+                                                               &trans                 &trans         &trans    &trans  &trans         &trans
             >;
 
             label = "WM";
