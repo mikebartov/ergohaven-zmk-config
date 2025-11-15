@@ -81,6 +81,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        endash_en: endash_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENDASH_EN";
+            bindings = <&endash_en>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <50>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -299,6 +310,18 @@
             bindings = <&kp LG(Z)>;
             key-positions = <20 10>;
             layers = <0 1>;
+        };
+
+        nbsp_emdash_en {
+            bindings = <&nbsp_emdash_en>;
+            key-positions = <7 17>;
+            layers = <2>;
+        };
+
+        nbsp_emdash_ru {
+            bindings = <&nbsp_emdash_ru>;
+            key-positions = <7 17>;
+            layers = <3>;
         };
     };
 
@@ -590,6 +613,13 @@
             bindings = <&to 1 &kp SPACE>;
             label = "CAPS_WORD_RU_OFF";
         };
+
+        endash_en: endash_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru LA(MINUS)>;
+            label = "ENDASH_EN";
+        };
     };
 
     keymap {
@@ -619,9 +649,9 @@
 
         sym_en {
             bindings = <
-  &kp CARET         &kp SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                                     &kp AT     &kp HASH   &kp DOLLAR           &kp AMPS       &kp PIPE
-  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR        &kp RPAR          &kp SEMI                                      &kp COLON  &kp EXCL   &td_dash_en 0 MINUS  &kp QUESTION   &kp EQUAL
-  &kp LT            &kp GT             &ru LA(SEMI)    &ru LS(LA(SEMI))  &kp DOUBLE_QUOTES                             &kp ASTRK  &kp SLASH  &kp UNDER            &kp BACKSLASH  &kp TILDE
+  &kp CARET         &kp SINGLE_QUOTE   &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp GRAVE                                     &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
+  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR        &kp RPAR          &kp SEMI                                      &kp COLON  &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
+  &kp LT            &kp GT             &ru LA(SEMI)    &ru LS(LA(SEMI))  &kp DOUBLE_QUOTES                             &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
                                                        &ru LS(LA(N8))    &ru LA(H)          &trans    &comma_space_en  &kp DOT    &kp PRCNT
             >;
 
@@ -631,19 +661,19 @@
         sym_ru {
             display-name = "SYM";
             bindings = <
-  &en CARET         &en SINGLE_QUOTE   &en LEFT_BRACE  &en RIGHT_BRACE   &en GRAVE                               &en AT        &en HASH      &en DOLLAR              &en AMPS          &en PIPE
-  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_LPAR     &kp RU_RPAR       &kp RU_SEMI                             &kp RU_COLON  &kp RU_EXCL   &td_dash_ru 0 RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
-  &en LT            &en GT             &kp LA(SEMI)    &kp LS(LA(SEMI))  &kp RU_DQT                              &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER            &kp RU_BACKSLASH  &en TILDE
+  &en CARET         &en SINGLE_QUOTE   &en LEFT_BRACE  &en RIGHT_BRACE   &en GRAVE                               &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
+  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_LPAR     &kp RU_RPAR       &kp RU_SEMI                             &kp RU_COLON  &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
+  &en LT            &en GT             &kp LA(SEMI)    &kp LS(LA(SEMI))  &kp RU_DQT                              &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
                                                        &kp LS(LA(N8))    &kp LA(H)    &trans    &comma_space_ru  &kp RU_DOT    &kp PRCNT
             >;
         };
 
         num_en {
             bindings = <
-  &trans                 &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &kp MINUS  &kp N7     &kp N8  &kp N9  &kp COLON
-  &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                       &kp PLUS   &kp N4     &kp N5  &kp N6  &kp N0
-  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))                       &kp ASTRK  &kp N1     &kp N2  &kp N3  &kp SLASH
-                                                                       &kp LS(LA(LC(LG(S))))  &trans                 &trans    &kp COMMA  &kp DOT    &kp PRCNT
+  &trans                 &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &endash_en 0 MINUS  &kp N7     &kp N8  &kp N9  &kp COLON
+  &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                       &kp PLUS            &kp N4     &kp N5  &kp N6  &kp N0
+  &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))                       &kp ASTRK           &kp N1     &kp N2  &kp N3  &kp SLASH
+                                                                       &kp LS(LA(LC(LG(S))))  &trans                 &trans    &kp COMMA  &kp DOT             &kp PRCNT
             >;
 
             label = "NUM";
@@ -687,7 +717,7 @@
   &trans    &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &kp BSPC                       &kp DEL       &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
   &kp LCMD  &kp LCTRL         &kp LALT        &kp LSHIFT        &kp LCTRL                      &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
   &trans    &mt LG(X) C_PREV  &mt LG(C) C_PP  &mt LG(V) C_NEXT  &trans                         &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
-                                              &trans            &mkp MB2   &mkp MB1    &trans  &trans        &trans
+                                              &trans            &mkp MB2   &mkp MB1    &trans  &kp ESC       &trans
             >;
 
             display-name = "NAV";
