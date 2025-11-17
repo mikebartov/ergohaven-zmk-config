@@ -213,7 +213,7 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <16 15>;
-            layers = <0 1 8>;
+            layers = <0 1 8 4 5>;
         };
 
         layer_UCS {
@@ -303,13 +303,13 @@
         emdash_en {
             bindings = <&ru LS(LA(MINUS))>;
             key-positions = <16 26>;
-            layers = <2>;
+            layers = <2 0>;
         };
 
         emdash_ru {
             bindings = <&kp LS(LA(MINUS))>;
             key-positions = <16 26>;
-            layers = <3>;
+            layers = <3 1>;
         };
 
         delete {
