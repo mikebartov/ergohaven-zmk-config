@@ -307,16 +307,22 @@
             layers = <3 1>;
         };
 
-        delete {
-            bindings = <&kp DEL>;
-            key-positions = <7 17>;
-            layers = <0 1 8>;
+        F_1 {
+            bindings = <&kp F1>;
+            key-positions = <14 24>;
+            layers = <0 1>;
         };
 
-        backspace {
-            bindings = <&kp BSPC>;
-            key-positions = <6 16>;
-            layers = <0 1 8>;
+        delete_word_left {
+            bindings = <&kp LA(BSPC)>;
+            key-positions = <5 15>;
+            layers = <8>;
+        };
+
+        delete_word_right {
+            bindings = <&kp LA(DEL)>;
+            key-positions = <4 14>;
+            layers = <8>;
         };
     };
 
@@ -694,10 +700,10 @@
 
         macro_en {
             bindings = <
-  &trans  &trans        &trans         &trans         &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
-  &trans  &new_section  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                        &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
-  &trans  &trans        &kp LS(LG(C))  &trans         &trans                           &trans             &kp LA(LC(A))   &kp LA(LC(R))      &trans              &kp LA(LC(LG(G)))
-                                       &trans         &kp LG(ENTER)  &kp F1    &trans  &trans             &kp LC(LG(C))
+  &trans          &trans        &trans         &trans         &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
+  &kp LS(LG(N0))  &new_section  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                        &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
+  &trans          &trans        &kp LS(LG(C))  &trans         &trans                           &trans             &kp LA(LC(A))   &kp LA(LC(R))      &trans              &kp LA(LC(LG(G)))
+                                               &trans         &kp LG(ENTER)  &kp F1    &trans  &trans             &kp LC(LG(C))
             >;
 
             label = "HOT";
@@ -705,10 +711,10 @@
 
         macro_ru {
             bindings = <
-  &trans  &trans        &trans         &trans         &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
-  &trans  &new_section  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                        &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))
-  &trans  &trans        &kp LS(LG(C))  &trans         &trans                           &trans             &en LA(LC(A))   &en LA(LC(R))      &trans              &en LA(LC(LG(G)))
-                                       &trans         &kp LG(ENTER)  &kp F1    &trans  &trans             &kp LC(LG(C))
+  &trans          &trans        &trans         &trans         &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
+  &kp LS(LG(N0))  &new_section  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                        &kp LA(LC(LG(M)))  &kp LS(F3)      &en LA(LC(LG(Z)))  &en LA(LC(LG(N2)))  &en LA(LC(LG(S)))
+  &trans          &trans        &kp LS(LG(C))  &trans         &trans                           &trans             &en LA(LC(A))   &en LA(LC(R))      &trans              &en LA(LC(LG(G)))
+                                               &trans         &kp LG(ENTER)  &kp F1    &trans  &trans             &kp LC(LG(C))
             >;
 
             label = "HOT";
