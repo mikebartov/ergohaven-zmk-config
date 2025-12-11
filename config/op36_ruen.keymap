@@ -92,16 +92,6 @@
             quick-tap-ms = <50>;
             flavor = "tap-preferred";
         };
-
-        hold: hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD";
-            bindings = <&kp>, <&trans>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            require-prior-idle-ms = <120>;
-        };
     };
 
     combos {
@@ -738,10 +728,10 @@
 
         nav {
             bindings = <
-  &trans    &trans         &trans         &trans         &kp DEL                         &kp BSPC      &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
-  &kp LCMD  &kp LCTRL      &kp LALT       &kp LSHIFT     &kp TAB                         &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
-  &trans    &hold LG(X) 0  &hold LG(C) 0  &hold LG(V) 0  &trans                          &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
-                                          &trans         &kp ENTER  &kp SPACE    &trans  &kp ESC       &trans
+  &trans    &trans     &trans    &trans      &kp DEL                         &kp BSPC      &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
+  &kp LCMD  &kp LCTRL  &kp LALT  &kp LSHIFT  &kp TAB                         &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
+  &trans    &trans     &trans    &trans      &trans                          &kp HOME      &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp END
+                                 &trans      &kp ENTER  &kp SPACE    &trans  &kp ESC       &trans
             >;
 
             display-name = "NAV";
