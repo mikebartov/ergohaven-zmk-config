@@ -41,28 +41,6 @@
             hold-trigger-on-release;
         };
 
-        td_dash_en: td_dash_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TD_DASH_EN";
-            bindings = <&nbsp_emdash_en>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <50>;
-            flavor = "tap-preferred";
-        };
-
-        td_dash_ru: td_dash_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TD_DASH_RU";
-            bindings = <&nbsp_emdash_ru>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <50>;
-            flavor = "tap-preferred";
-        };
-
         lt_capsword_off: lt_capsword_off {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_CAPSWORD_OFF";
@@ -71,15 +49,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-        };
-
-        bspc_del: bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_DEL";
-            bindings = <&lt 8 BSPC>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         endash_en_kp: endash_en_kp {
@@ -612,13 +581,6 @@
             #binding-cells = <0>;
             bindings = <&kp U &kp N2 &kp N0 &kp N8 &kp N5 &kp U &kp N2 &kp N0 &kp N8 &kp N0>;
             label = "SUB_50";
-        };
-
-        capsword_off: caps_word_ru_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1 &kp SPACE>;
-            label = "CAPS_WORD_RU_OFF";
         };
 
         endash_en: endash_en {
