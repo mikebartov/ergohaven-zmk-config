@@ -599,7 +599,7 @@
                                           &ml 11 LALT    &lt 4 ENTER  &lt 2 SPACE    &mo 8  &lt 6 ESC    &mo 10
             >;
 
-            display-name = "EN";
+            display-name = "ENG";
         };
 
         ru {
@@ -610,7 +610,7 @@
                                                                                    &none                      &lt 5 ENTER                        &lt 3 SPACE    &mo 8  &lt 7 ESC                 &mo 10
             >;
 
-            display-name = "RU";
+            display-name = "RUS";
         };
 
         sym_en {
@@ -693,11 +693,11 @@
             bindings = <
   &trans  &trans         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(LA(LC(LG(S))))                            &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
   &trans  &kp LA(LG(C))  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(RIGHT_BRACKET)))                    &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
-  &trans  &trans         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                                           &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
+  &trans  &trans         &trans                &kp LC(LALT)           &trans                                           &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
                                                &trans                 &trans                         &trans    &trans  &trans         &trans
             >;
 
-            label = "WM";
+            label = "WMG";
         };
 
         extra {
