@@ -594,8 +594,8 @@
         en {
             bindings = <
   &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y        &kp U          &kp I        &mt LG(O) O   &mt LG(P) P
-  &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHIFT F  &kp G                                   &lt 12 H     &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMICOLON
-  &lt 9 Z      &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B                                   &mt LG(N) N  &kp M          &none        &none         &none
+  &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHIFT F  &kp G                                   &kp H        &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMICOLON
+  &lt 9 Z      &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B                                   &mt LG(N) N  &kp M          &none        &none         &mo 12
                                           &ml 11 LALT    &lt 4 ENTER  &lt 2 SPACE    &lt 8 SEMI  &lt 6 ESC    &mo 10
             >;
 
@@ -605,8 +605,8 @@
         ru {
             bindings = <
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA         &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &mt LG(O) RU_CYRILLIC_ZE   &mt LG(P) RU_CYRILLIC_HA
-  &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                               &lt 12 RU_CYRILLIC_ER     &hmr RSHIFT RU_CYRILLIC_O                        &hmr RALT RU_CYRILLIC_EL               &hmr RCTRL RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
-  &lt 9 RU_CYRILLIC_YA      &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                                &mt LG(N) RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E
+  &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                               &kp RU_CYRILLIC_ER        &hmr RSHIFT RU_CYRILLIC_O                        &hmr RALT RU_CYRILLIC_EL               &hmr RCTRL RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
+  &lt 9 RU_CYRILLIC_YA      &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                                &mt LG(N) RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &lt 12 RU_CYRILLIC_E
                                                                                    &none                      &lt 5 ENTER                        &lt 3 SPACE    &lt 8 RU_SEMI  &lt 7 ESC                 &mo 10
             >;
 
