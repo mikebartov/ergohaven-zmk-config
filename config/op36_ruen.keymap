@@ -636,7 +636,7 @@
 
         num_en {
             bindings = <
-  &trans                 &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &endash_en_kp 0 MINUS  &kp N7     &kp N8  &kp N9  &kp COLON
+  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &endash_en_kp 0 MINUS  &kp N7     &kp N8  &kp N9  &kp COLON
   &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                       &kp PLUS               &kp N4     &kp N5  &kp N6  &kp N0
   &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))                       &kp ASTRK              &kp N1     &kp N2  &kp N3  &kp SLASH
                                                                        &trans                 &trans                 &trans    &kp COMMA  &kp DOT                &kp PRCNT
@@ -647,7 +647,7 @@
 
         num_ru {
             bindings = <
-  &trans                 &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                          &mt LA(RU_MINUS) RU_MINUS  &kp N7        &kp N8  &kp N9  &kp RU_COLON
+  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                          &mt LA(RU_MINUS) RU_MINUS  &kp N7        &kp N8  &kp N9  &kp RU_COLON
   &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                          &kp RU_PLUS                &kp N4        &kp N5  &kp N6  &kp N0
   &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))                          &kp RU_ASTRK               &kp N1        &kp N2  &kp N3  &kp RU_SLASH
                                                                        &trans                 &trans                 &trans    &kp RU_COMMA  &kp RU_DOT                 &kp RU_PRCNT
