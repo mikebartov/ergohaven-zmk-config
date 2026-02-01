@@ -682,7 +682,7 @@
             bindings = <
   &trans    &trans     &trans     &trans      &kp DEL                         &kp BSPC      &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
   &kp LCMD  &kp LCTRL  &kp LALT   &kp LSHIFT  &kp TAB                         &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
-  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK   &trans                          &kp LG(LEFT)  &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp LG(RIGHT)
+  &trans    &trans     &mkp RCLK  &mkp LCLK   &trans                          &kp LG(LEFT)  &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp LG(RIGHT)
                                   &trans      &kp ENTER  &kp SPACE    &trans  &kp ESC       &trans
             >;
 
@@ -691,10 +691,10 @@
 
         wind_man {
             bindings = <
-  &trans  &trans         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(LA(LC(LG(S))))                            &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
-  &trans  &kp LA(LG(C))  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(RIGHT_BRACKET)))                    &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
-  &trans  &trans         &kp LA(C)             &trans                 &trans                                           &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
-                                               &trans                 &trans                         &trans    &trans  &trans         &trans
+  &trans  &trans         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(LA(LC(LG(S))))                               &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
+  &trans  &kp LA(LG(C))  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(RIGHT_BRACKET)))                       &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
+  &trans  &trans         &trans                &trans                 &trans                                              &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
+                                               &trans                 &trans                         &mkp MCLK    &trans  &trans         &trans
             >;
 
             label = "WMG";
