@@ -593,7 +593,7 @@
 
         en {
             bindings = <
-  &kp Q        &kp W         &kp E        &kp R          &kp T                                   &kp Y        &kp U           &kp I        &mt LG(O) O   &mt LG(P) P
+  &kp Q        &kp W         &kp E        &mt LG(R) R    &kp T                                   &kp Y        &kp U           &kp I        &mt LG(O) O   &mt LG(P) P
   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHIFT F  &lt 10 G                                &lt 10 H     &hmr RSHIFT J   &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMICOLON
   &lt 9 Z      &mt LG(X) X   &mt LG(C) C  &mt LG(V) V    &kp B                                   &mt LG(N) N  &kp M           &none        &none         &mo 12
                                           &ml 11 LALT    &lt 4 ENTER  &lt 2 SPACE    &lt 8 SEMI  &lt 6 ESC    &sk LEFT_SHIFT
@@ -604,7 +604,7 @@
 
         ru {
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA         &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &mt LG(O) RU_CYRILLIC_ZE   &mt LG(P) RU_CYRILLIC_HA
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &mt LG(R) RU_CYRILLIC_KA   &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &mt LG(O) RU_CYRILLIC_ZE   &mt LG(P) RU_CYRILLIC_HA
   &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                            &lt 10 RU_CYRILLIC_ER     &hmr RSHIFT RU_CYRILLIC_O                        &hmr RALT RU_CYRILLIC_EL               &hmr RCTRL RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
   &lt 9 RU_CYRILLIC_YA      &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                                &mt LG(N) RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &lt 12 RU_CYRILLIC_E
                                                                                    &none                      &lt 5 ENTER                        &lt 3 SPACE    &lt 8 RU_SEMI  &lt 7 ESC                 &sk LEFT_SHIFT
@@ -680,10 +680,10 @@
 
         nav {
             bindings = <
-  &trans    &trans     &trans     &trans      &kp DEL                         &kp BSPC      &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
-  &kp LCMD  &kp LCTRL  &kp LALT   &kp LSHIFT  &kp TAB                         &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
-  &trans    &trans     &mkp RCLK  &mkp LCLK   &trans                          &kp LG(LEFT)  &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp LG(RIGHT)
-                                  &trans      &kp ENTER  &kp SPACE    &trans  &kp ESC       &trans
+  &trans    &trans     &trans     &trans      &kp DEL                                 &kp BSPC      &kp LC(LEFT)    &kp UP        &kp LC(RIGHT)  &kp LG(LC(Q))
+  &kp LCMD  &kp LCTRL  &kp LALT   &kp LSHIFT  &kp TAB                                 &kp LA(LEFT)  &kp LEFT        &kp DOWN      &kp RIGHT      &kp LA(RIGHT)
+  &trans    &trans     &mkp RCLK  &mkp LCLK   &trans                                  &kp LG(LEFT)  &msc SCRL_DOWN  &msc SCRL_UP  &trans         &kp LG(RIGHT)
+                                  &trans      &kp ENTER  &hml LSHIFT SPACE    &trans  &kp ESC       &trans
             >;
 
             display-name = "NAV";
@@ -691,10 +691,10 @@
 
         wind_man {
             bindings = <
-  &trans  &trans         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LS(LA(LC(LG(S))))                               &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
-  &trans  &kp LA(LG(C))  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(RIGHT_BRACKET)))                       &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
-  &trans  &trans         &trans                &trans                 &trans                                              &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
-                                               &trans                 &trans                         &mkp MCLK    &trans  &trans         &trans
+  &trans  &trans                         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                                      &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
+  &trans  &kp LA(LG(C))                  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(LC(S))))                       &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
+  &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &trans                &trans                 &trans                                      &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
+                                                               &trans                 &trans                 &mkp MCLK    &trans  &trans         &trans
             >;
 
             label = "WMG";
