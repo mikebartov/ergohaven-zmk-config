@@ -658,9 +658,9 @@
 
         macro_en {
             bindings = <
-  &trans          &trans        &trans         &trans         &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
+  &trans          &trans        &kp LC(LG(K))  &kp LA(LC(R))  &trans                           &kp LA(LG(N6))     &kp LA(LG(N7))  &kp LA(LG(N8))     &kp LG(O)           &kp LG(P)
   &kp LS(LG(N0))  &new_section  &kp LA(MINUS)  &kp LS(LG(M))  &kp K_APP                        &kp LA(LC(LG(M)))  &kp LS(F3)      &kp LA(LC(LG(Z)))  &kp LA(LC(LG(N2)))  &kp LA(LC(LG(S)))
-  &trans          &trans        &kp LS(LG(C))  &trans         &trans                           &trans             &kp LA(LC(A))   &kp LA(LC(R))      &kp LG(N8)          &kp LA(LC(LG(G)))
+  &trans          &trans        &kp LS(LG(C))  &kp LA(LC(V))  &trans                           &trans             &kp LA(LC(A))   &kp LA(LC(R))      &kp LG(N8)          &kp LA(LC(LG(G)))
                                                &trans         &kp LG(ENTER)  &kp F1    &trans  &trans             &kp LC(LG(C))
             >;
 
@@ -731,6 +731,15 @@
             >;
 
             label = "MED";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        macro_en {
+            if-layers = <1 6>;
+            then-layer = <7>;
         };
     };
 };
