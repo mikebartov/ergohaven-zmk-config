@@ -107,31 +107,31 @@
         ALT_1 {
             bindings = <&kp LA(N1)>;
             key-positions = <5 15>;
-            layers = <9>;
+            layers = <0 1>;
         };
 
         ALT_2 {
             bindings = <&kp LA(N2)>;
             key-positions = <6 16>;
-            layers = <9>;
+            layers = <0 1>;
         };
 
         ALT_3 {
             bindings = <&kp LA(N3)>;
             key-positions = <17 7>;
-            layers = <9>;
+            layers = <0 1>;
         };
 
         ALT_4 {
             bindings = <&kp LA(N4)>;
             key-positions = <8 18>;
-            layers = <9>;
+            layers = <0 1>;
         };
 
         ALT_5 {
             bindings = <&kp LA(N5)>;
             key-positions = <9 19>;
-            layers = <9>;
+            layers = <0 1>;
         };
 
         shortcat {
@@ -154,7 +154,7 @@
 
         cmb_tab {
             bindings = <&kp TAB>;
-            key-positions = <5 15>;
+            key-positions = <16 26>;
             layers = <1 0>;
         };
 
@@ -257,13 +257,13 @@
         emdash_en {
             bindings = <&ru LS(LA(MINUS))>;
             key-positions = <16 26>;
-            layers = <2 0>;
+            layers = <2>;
         };
 
         emdash_ru {
             bindings = <&kp LS(LA(MINUS))>;
             key-positions = <16 26>;
-            layers = <3 1>;
+            layers = <3>;
         };
 
         F_1 {
@@ -615,10 +615,10 @@
 
         sym_en {
             bindings = <
-  &kp CARET         &kp SINGLE_QUOTE    &kp LEFT_BRACE    &kp RIGHT_BRACE      &kp GRAVE                         &kp AT           &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
-  &kp LT            &kp GT              &kp LPAR          &kp RPAR             &kp SEMI                          &kp COLON        &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
-  &ru LA(SEMI)      &ru LS(LA(SEMI))    &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp DOUBLE_QUOTES                 &kp ASTRK        &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
-                                        &ru LS(LA(N8))    &ru LA(H)            &trans                            &comma_space_en  &kp DOT    &kp PRCNT
+  &kp CARET     &kp SINGLE_QUOTE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE                                     &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
+  &kp LT        &kp GT            &kp LPAR          &kp RPAR           &kp SEMI                                      &kp COLON  &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
+  &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES                             &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
+                                                    &ru LS(LA(N8))     &ru LA(H)          &trans    &comma_space_en  &kp DOT    &kp PRCNT
             >;
 
             display-name = "SYM";
@@ -627,10 +627,10 @@
         sym_ru {
             display-name = "SYM";
             bindings = <
-  &en CARET       &en SINGLE_QUOTE      &en LEFT_BRACE    &en RIGHT_BRACE       &en GRAVE                        &en AT           &en HASH      &en DOLLAR    &en AMPS          &en PIPE
-  &en LT          &en GT                &kp RU_LPAR       &kp RU_RPAR           &kp RU_SEMI                      &kp RU_COLON     &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
-  &kp LA(SEMI)    &kp LS(LA(SEMI))      &en LEFT_BRACKET  &en RIGHT_BRACKET     &kp RU_DQT                       &kp RU_ASTRK     &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
-                                        &kp LS(LA(N8))    &kp LA(H)             &trans                           &comma_space_ru  &kp RU_DOT    &kp PRCNT
+  &en CARET     &en SINGLE_QUOTE  &en LEFT_BRACE    &en RIGHT_BRACE    &en GRAVE                               &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
+  &en LT        &en GT            &kp RU_LPAR       &kp RU_RPAR        &kp RU_SEMI                             &kp RU_COLON  &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
+  &kp LA(SEMI)  &kp LS(LA(SEMI))  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DQT                              &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
+                                                    &kp LS(LA(N8))     &kp LA(H)    &trans    &comma_space_ru  &kp RU_DOT    &kp PRCNT
             >;
         };
 
@@ -639,7 +639,7 @@
   &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                       &endash_en_kp 0 MINUS  &kp N7     &kp N8  &kp N9  &kp COLON
   &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(G))))                       &kp PLUS               &kp N4     &kp N5  &kp N6  &kp N0
   &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(K))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(M))))                       &kp ASTRK              &kp N1     &kp N2  &kp N3  &kp SLASH
-                                                &trans                 &trans                 &trans                                      &kp COMMA              &kp DOT    &kp PRCNT
+                                                                       &trans                 &trans                 &trans    &kp COMMA  &kp DOT                &kp PRCNT
             >;
 
             label = "NUM";
