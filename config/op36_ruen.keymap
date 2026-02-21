@@ -136,13 +136,13 @@
 
         shortcat {
             bindings = <&kp LS(LG(SPACE))>;
-            key-positions = <16 17>;
+            key-positions = <16 26>;
             layers = <0 1>;
         };
 
         command_palette {
             bindings = <&kp LS(LG(P))>;
-            key-positions = <16 26>;
+            key-positions = <16 17>;
             layers = <0 1>;
         };
 
@@ -155,7 +155,7 @@
         cmb_tab {
             bindings = <&kp TAB>;
             key-positions = <16 15>;
-            layers = <1 0 8>;
+            layers = <1 0 8 4 5>;
         };
 
         word_nbhyphen {
