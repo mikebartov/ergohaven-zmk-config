@@ -693,7 +693,7 @@
             bindings = <
   &trans  &trans                         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                                      &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
   &trans  &kp LA(LG(C))                  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(LC(S))))                       &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
-  &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &trans                &trans                 &trans                                      &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
+  &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LA(LG(Q))         &kp LA(LG(E))          &trans                                      &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
                                                                &trans                 &trans                 &mkp MCLK    &trans  &trans         &trans
             >;
 
