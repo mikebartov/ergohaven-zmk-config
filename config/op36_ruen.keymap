@@ -60,6 +60,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
         };
+
+        lt_comma_space_en: lt_comma_space_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_COMMA_SPACE_EN";
+            bindings = <&lt>, <&comma_space_en>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+        };
+
+        lt_comma_space_ru: lt_comma_space_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_COMMA_SPACE_RU";
+            bindings = <&lt>, <&comma_space_ru>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -624,10 +642,10 @@
 
         sym_en {
             bindings = <
-  &kp CARET     &kp SINGLE_QUOTE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE                                     &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
-  &kp LT        &kp GT            &kp LPAR          &kp RPAR           &kp SEMI                                      &kp PLUS   &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
-  &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES                             &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
-                                                    &ru LS(LA(N8))     &ru LA(H)          &trans    &comma_space_en  &kp DOT    &kp PRCNT
+  &kp CARET     &kp SINGLE_QUOTE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE                                            &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
+  &kp LT        &kp GT            &kp LPAR          &kp RPAR           &kp SEMI                                             &kp PLUS   &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
+  &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES                                    &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
+                                                    &ru LS(LA(N8))     &ru LA(H)          &trans    &lt_comma_space_en 8 0  &kp DOT    &kp PRCNT
             >;
 
             display-name = "SYM";
@@ -636,10 +654,10 @@
         sym_ru {
             display-name = "SYM";
             bindings = <
-  &en CARET     &en SINGLE_QUOTE  &en LEFT_BRACE    &en RIGHT_BRACE    &en GRAVE                               &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
-  &en LT        &en GT            &kp RU_LPAR       &kp RU_RPAR        &kp RU_SEMI                             &kp RU_PLUS   &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
-  &kp LA(SEMI)  &kp LS(LA(SEMI))  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DQT                              &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
-                                                    &kp LS(LA(N8))     &kp LA(H)    &trans    &comma_space_ru  &kp RU_DOT    &kp PRCNT
+  &en CARET     &en SINGLE_QUOTE  &en LEFT_BRACE    &en RIGHT_BRACE    &en GRAVE                                      &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
+  &en LT        &en GT            &kp RU_LPAR       &kp RU_RPAR        &kp RU_SEMI                                    &kp RU_PLUS   &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
+  &kp LA(SEMI)  &kp LS(LA(SEMI))  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DQT                                     &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
+                                                    &kp LS(LA(N8))     &kp LA(H)    &trans    &lt_comma_space_ru 8 0  &kp RU_DOT    &kp PRCNT
             >;
         };
 
@@ -701,9 +719,9 @@
         wind_man {
             bindings = <
   &trans  &trans                         &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans                                      &kp LG(MINUS)  &kp LS(LA(LG(W)))  &kp LS(LA(LG(E)))  &kp LS(LA(LG(R)))  &trans
-  &trans  &kp LA(LG(C))                  &kp LS(LC(TAB))       &kp LC(TAB)            &kp LG(LA(LS(LC(S))))                       &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
+  &trans  &kp LA(LG(C))                  &kp LS(LC(TAB))       &kp LC(TAB)            &trans                                      &kp LG(EQUAL)  &kp LS(LA(LG(S)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(F)))  &kp LS(LA(LG(G)))
   &trans  &kp LS(LA(LG(RIGHT_BRACKET)))  &kp LC(LG(W))         &kp LC(LG(E))          &trans                                      &kp LG(N0)     &kp LS(LA(LG(X)))  &kp LS(LA(LG(C)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(A)))
-                                                               &trans                 &trans                 &mkp MCLK    &trans  &trans         &trans
+                                                               &trans                 &trans  &mkp MCLK    &kp LS(LA(LC(LG(S))))  &trans         &trans
             >;
 
             label = "WMG";
