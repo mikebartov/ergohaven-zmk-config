@@ -52,28 +52,10 @@
             flavor = "tap-preferred";
         };
 
-        mo_repeat: mo_repeat {
+        lt_repeat: lt_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "MO_REPEAT";
+            label = "LT_REPEAT";
             bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-        };
-
-        lt_comma_space_en: lt_comma_space_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_COMMA_SPACE_EN";
-            bindings = <&lt>, <&comma_space_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-        };
-
-        lt_comma_space_ru: lt_comma_space_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_COMMA_SPACE_RU";
-            bindings = <&lt>, <&comma_space_ru>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -315,6 +297,18 @@
             bindings = <&kp CAPS>;
             key-positions = <13 16>;
             layers = <0 1>;
+        };
+
+        comma_space_ru {
+            bindings = <&comma_space_ru>;
+            key-positions = <27 28>;
+            layers = <1>;
+        };
+
+        comma_space_en {
+            bindings = <&comma_space_en>;
+            key-positions = <27 28>;
+            layers = <0>;
         };
     };
 
@@ -623,7 +617,7 @@
   &kp Q        &kp W         &kp E        &mt LG(R) R      &kp T                                    &kp Y        &kp U           &kp I        &mt LG(O) O   &mt LG(P) P
   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHIFT F    &lt 10 G                                 &lt 10 H     &hmr RSHIFT J   &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMICOLON
   &lt 9 Z      &mt LG(X) X   &mt LG(C) C  &mt LG(V) V      &kp B                                    &mt LG(N) N  &kp M           &none        &none         &none
-                                          &mo_repeat 12 0  &lt 4 ENTER  &lt 2 SPACE    &lt 8 COLON  &lt 6 ESC    &sk LEFT_SHIFT
+                                          &lt_repeat 12 0  &lt 4 ENTER  &lt 2 SPACE    &lt 8 COLON  &lt 6 ESC    &sk LEFT_SHIFT
             >;
 
             display-name = "ENG";
@@ -634,7 +628,7 @@
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &mt LG(R) RU_CYRILLIC_KA   &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                                 &kp RU_CYRILLIC_EN        &kp RU_CYRILLIC_GHE                              &mt RU_CYRILLIC_SHCHA RU_CYRILLIC_SHA  &mt LG(O) RU_CYRILLIC_ZE   &mt LG(P) RU_CYRILLIC_HA
   &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                             &lt 10 RU_CYRILLIC_ER     &hmr RSHIFT RU_CYRILLIC_O                        &hmr RALT RU_CYRILLIC_EL               &hmr RCTRL RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
   &lt 9 RU_CYRILLIC_YA      &mt LG(X) RU_CYRILLIC_CHE    &mt LG(C) RU_CYRILLIC_ES  &mt LG(V) RU_CYRILLIC_EM   &kp RU_CYRILLIC_I                                                 &mt LG(N) RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE                     &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E
-                                                                                   &mo_repeat 12 0            &lt 5 ENTER                        &lt 3 SPACE    &lt 8 RU_COLON  &lt 7 ESC                 &sk LEFT_SHIFT
+                                                                                   &lt_repeat 12 0            &lt 5 ENTER                        &lt 3 SPACE    &lt 8 RU_COLON  &lt 7 ESC                 &sk LEFT_SHIFT
             >;
 
             display-name = "RUS";
@@ -642,10 +636,10 @@
 
         sym_en {
             bindings = <
-  &kp CARET     &kp SINGLE_QUOTE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE                                            &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
-  &kp LT        &kp GT            &kp LPAR          &kp RPAR           &kp SEMI                                             &kp PLUS   &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
-  &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES                                    &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
-                                                    &ru LS(LA(N8))     &ru LA(H)          &trans    &lt_comma_space_en 8 0  &kp DOT    &kp PRCNT
+  &kp CARET     &kp SINGLE_QUOTE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE                                 &kp AT     &kp HASH   &kp DOLLAR  &kp AMPS       &kp PIPE
+  &kp LT        &kp GT            &kp LPAR          &kp RPAR           &kp SEMI                                  &kp PLUS   &kp EXCL   &kp MINUS   &kp QUESTION   &kp EQUAL
+  &ru LA(SEMI)  &ru LS(LA(SEMI))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES                         &kp ASTRK  &kp SLASH  &kp UNDER   &kp BACKSLASH  &kp TILDE
+                                                    &ru LS(LA(N8))     &ru LA(H)          &trans    &lt 8 COMMA  &kp DOT    &kp PRCNT
             >;
 
             display-name = "SYM";
@@ -654,10 +648,10 @@
         sym_ru {
             display-name = "SYM";
             bindings = <
-  &en CARET     &en SINGLE_QUOTE  &en LEFT_BRACE    &en RIGHT_BRACE    &en GRAVE                                      &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
-  &en LT        &en GT            &kp RU_LPAR       &kp RU_RPAR        &kp RU_SEMI                                    &kp RU_PLUS   &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
-  &kp LA(SEMI)  &kp LS(LA(SEMI))  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DQT                                     &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
-                                                    &kp LS(LA(N8))     &kp LA(H)    &trans    &lt_comma_space_ru 8 0  &kp RU_DOT    &kp PRCNT
+  &en CARET     &en SINGLE_QUOTE  &en LEFT_BRACE    &en RIGHT_BRACE    &en GRAVE                              &en AT        &en HASH      &en DOLLAR    &en AMPS          &en PIPE
+  &en LT        &en GT            &kp RU_LPAR       &kp RU_RPAR        &kp RU_SEMI                            &kp RU_PLUS   &kp RU_EXCL   &kp RU_MINUS  &kp RU_QUESTION   &kp RU_EQUAL
+  &kp LA(SEMI)  &kp LS(LA(SEMI))  &en LEFT_BRACKET  &en RIGHT_BRACKET  &kp RU_DQT                             &kp RU_ASTRK  &kp RU_SLASH  &kp RU_UNDER  &kp RU_BACKSLASH  &en TILDE
+                                                    &kp LS(LA(N8))     &kp LA(H)    &trans    &lt 8 RU_COMMA  &kp RU_DOT    &kp PRCNT
             >;
         };
 
