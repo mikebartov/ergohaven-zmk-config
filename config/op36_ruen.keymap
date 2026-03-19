@@ -113,39 +113,9 @@
             layers = <0 1>;
         };
 
-        ALT_1 {
-            bindings = <&kp LA(N1)>;
-            key-positions = <5 15>;
-            layers = <0 1>;
-        };
-
-        ALT_2 {
-            bindings = <&kp LA(N2)>;
-            key-positions = <6 16>;
-            layers = <0 1>;
-        };
-
-        ALT_3 {
-            bindings = <&kp LA(N3)>;
-            key-positions = <17 7>;
-            layers = <0 1>;
-        };
-
-        ALT_4 {
-            bindings = <&kp LA(N4)>;
-            key-positions = <8 18>;
-            layers = <0 1>;
-        };
-
-        ALT_5 {
-            bindings = <&kp LA(N5)>;
-            key-positions = <9 19>;
-            layers = <0 1>;
-        };
-
         shortcat {
             bindings = <&kp LS(LG(SPACE))>;
-            key-positions = <16 26>;
+            key-positions = <16 6>;
             layers = <0 1>;
         };
 
@@ -169,13 +139,13 @@
 
         word_nbhyphen {
             bindings = <&kp LC(LG(MINUS))>;
-            key-positions = <17 27>;
+            key-positions = <17 7>;
             layers = <2 3>;
         };
 
         word_opt_hyphen {
             bindings = <&kp LA(LC(MINUS))>;
-            key-positions = <26 27>;
+            key-positions = <17 16 18>;
             layers = <2 3>;
         };
 
@@ -265,13 +235,13 @@
 
         emdash_en {
             bindings = <&ru LS(LA(MINUS))>;
-            key-positions = <16 26>;
+            key-positions = <17 16>;
             layers = <2>;
         };
 
         emdash_ru {
             bindings = <&kp LS(LA(MINUS))>;
-            key-positions = <16 26>;
+            key-positions = <17 16>;
             layers = <3>;
         };
 
@@ -309,6 +279,18 @@
             bindings = <&comma_space_en>;
             key-positions = <27 28>;
             layers = <0>;
+        };
+
+        endash_en {
+            bindings = <&ru LA(MINUS)>;
+            key-positions = <17 18>;
+            layers = <2>;
+        };
+
+        endash_ru {
+            bindings = <&kp LA(MINUS)>;
+            key-positions = <17 18>;
+            layers = <3>;
         };
     };
 
